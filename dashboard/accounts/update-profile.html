@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trustexfussion | Account Profile </title>
+    <link rel="stylesheet" href="/static/assets/flaticon/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="/static/docs/css/dark.css" id="theme">
+    <link rel="stylesheet" href="/static/docs/css/main.css">
+    <link rel="shortcut icon" type="image/jpg" href="/static/assets/images/fgh-logo.png" />
+    <link rel="stylesheet" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/fonts/fontawesome.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lobster|Heebo|Roboto|Rajdhani|Open Sans|Lato|Source Sans Pro">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <!-- Tel -->
+    <link rel="stylesheet" href="/static/assets/plugin/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.16/css/intlTelInput.css"/>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.16/js/intlTelInput.min.js"></script>
+   <!-- End Tel -->
+    <style>
+        p{
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- testing -->
+
+<!-- End TESTING -->
+
+<!-- messages -->
+
+<!-- end messages -->
+    <div class="site-container">
+         <!-- ## -->
+        <div class="d-none d-lg-block">
+            <nav class="navbar navbar-expand-lg px-4 fixed-top border-b dark-bg" style="z-index:99 !important; font-family: 'roboto';">
+                <div style="margin-left: 300px;">
+                    <h5 class="textColor">
+                        <i class="fa fa-caret-right site-green"></i>
+                        Account Profile
+                    </h5>
+                </div>
+
+                <div style="margin-left: 300px;">
+                    <h5 class="textColor">
+                        <i class="site-green"></i>
+                        Account Type: Single Account
+                    </h5>
+                </div>
+               
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mr-2 mt-2">
+                        <i class="material-icons-outlined fixIcon4 post-box p-1 blue-bg" style="font-size: 24px; border-radius: 50%; color: #fff;">
+                            person
+                        </i>
+                        <span>
+                            james@gmail.com
+                        </span>
+                    </li>
+                    <li class="nav-item mr-2 ml-2 border-l pl-3" onclick="accountMangt(this)">
+                        <a href="#" class="nav-link px-3">
+                            <button class="Btn py-2 px-4">
+                                Manage Account &nbsp;
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- mobile nav bar -->
+        <div class="d-block d-lg-none container-fluid sticky-top mobileNavBg" style="z-index: 3;">
+            <div class="row py-2">
+                <div class="col-6">
+                    <a class="navbar-brand" href="/">
+                        <span>
+                            <img src="/static/assets/images/fgh-logo.png" alt="fgh-logo"
+                                style="width:28px; height: 28px">
+                        </span>
+                    </a>
+                    <small class="textColor2">
+                        <i class="fa fa-caret-right"></i>
+                        <b>Account P…</b>
+                    </small>                  
+                </div>
+                <div class="col-6 align-right">
+                    <span class="p-2 fixIcon" onclick="accountMangt(this)">
+                        <i class="material-icons-outlined fixIcon2" style="font-size: 28px; color: #fff;">
+                            person
+                        </i>
+                        
+                          <i class="fa fa-circle redText" style="font-size: 8px;"></i>
+                        
+                    </span>
+                    
+                    <span class="p-2 fixIcon" onclick="openSideBarSm()" id="toggleDrawer">
+                        <i class="fi fi-rr-apps textColor2" style="font-size: 22px;"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- End top nav mobile -->
+
+        <!-- sidebar Mobile -->
+        <div class="d-block d-sm-none">
+    <div class="overlayDiv" id="overlayDiv" onclick="hideSideBarSm()" style="z-index: 9;"></div>
+
+    <div class="side-bar-mobile" id="sideBarSm" style="display: none; padding-bottom: 10px;">
+        <div class="side-bar-mobile-inner" style="height: 100%; overflow-y: scroll; padding-bottom: 40px;">
+            <div class="mt-2 border-b py-2">
+                <h4 class="reduceH5 text-center" style="font-family:'Ubuntu';">
+                    <span class="greyWhite2"><b>Trustexfussion</b></span>
+                </h4>
+            </div>
+            <!-- ******* -->
+    
+            <div class="container-fluid pr-0 pl-3 mt-3">
+                <div class="mb-2 pl-3">
+                    <small class="greyWhite2">Management/Wallets</small>
+                </div>
+                <a href="/dashboard/" class="textColor xsmall my-2">
+                    <div class="side-link  px-3">
+                        <i class="material-icons-round fixIcon" style="font-size: 16px;">dashboard</i> &nbsp;
+                        Dashboard
+                    </div>
+                </a>
+
+                <a href="/dashboard/" class="textColor xsmall" data-toggle="collapse" data-target="#walletOptions">
+                    <div class="side-link px-3 mt-4">
+                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">account_balance_wallet</i> &nbsp;
+                        Wallet
+                        <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
+                    </div>
+                </a>
+                <!-- wallets -->
+                <div class="collapse" id="walletOptions">
+                    <div class="container">
+                        <div class="mt-3 ml-4">
+                            <a href="/wallet/assets" class="greyWhite2 xsmall">
+                                Balances
+                            </a>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <a href="/wallet/deposit" class="greyWhite2 xsmall">
+                                Deposit
+                            </a>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <a href="/wallet/withdrawal" class="greyWhite2 xsmall">
+                                Withdraw
+                            </a>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <a href="/wallet/transfer" class="greyWhite2 xsmall">
+                                Transfer Asset
+                            </a>
+                        </div>
+                    </div>
+                </div> 
+                <!-- Wallets end -->
+    
+                <a href="/dashboard/" class="textColor xsmall" data-toggle="collapse" data-target="#txnOptions">
+                    <div class="side-link px-3 mt-4">
+                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">receipt_long</i> &nbsp;
+                        Transactions
+                        <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
+                    </div>
+                </a>
+                <div class="collapse" id="txnOptions">
+                    <div class="container">
+                        <div class="mt-3 ml-4">
+                            <a href="/wallet/transactions" class="greyWhite2 xsmall">
+                                Pending Orders
+                            </a>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <a href="/wallet/transaction-history" class="greyWhite2 xsmall">
+                                Transaction History
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="/dashboard/" class="textColor xsmall" data-toggle="collapse" data-target="#profileOptions">
+                    <div class="side-link px-3 mt-4">
+                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">settings</i> &nbsp;
+                        Settings
+                        <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
+                    </div>
+                </a>
+                <!-- Profile -->
+                <div class="collapse" id="profileOptions">
+                    <div class="container">
+                        <div class="mt-3 ml-4">
+                            <a href="/accounts/account-verification/" class="greyWhite2 xsmall">
+                                Verification
+                            </a>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <a href="/accounts/payment-settings/" class="greyWhite2 xsmall">
+                                Withdrawal Address
+                            </a>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <a href="/wallet/membership-application" class="greyWhite2 xsmall">
+                                Membership Card
+                            </a>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <a href="/wallet/withdrawal-card" class="greyWhite2 xsmall">
+                                Exclusive Withdrawal Card
+                            </a>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <a href="/accounts/security-settings/" class="greyWhite2 xsmall">
+                                Security Settings
+                            </a>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <a href="/accounts/update-profile" class="greyWhite2 xsmall">
+                                Profile
+                            </a>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <a href="/accounts/register-agents/" class="greyWhite2 xsmall">
+                                Become an Agent
+                            </a>
+                        </div>
+
+                    </div>
+                </div> 
+                <!-- Profile Ends -->
+    
+                <div class="mb-3 mt-4 pl-3">
+                    <small class="greyWhite2">Finance/Earn</small>
+                </div>
+                <a href="/invest/" class="textColor xsmall">
+                    <div class="side-link px-3 mt-4">
+                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">scatter_plot</i> &nbsp;
+                        Invest
+                    </div>
+                </a>
+                <a href="/dashboard/investments" class="textColor xsmall">
+                    <div class="side-link px-3 mt-4">
+                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">leaderboard</i> &nbsp;
+                        My Investments
+                    </div>
+                </a>
+                <a href="/dashboard/investments-gold/" class="textColor xsmall">
+                    <div class="side-link px-3 mt-4">
+                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">leaderboard</i> &nbsp;
+                        My Golds
+                    </div>
+                </a>
+                <a href="/wallet/apply-for-loan/" class="textColor xsmall">
+                    <div class="side-link px-3 mt-4">
+                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                        Loan Application
+                    </div>
+                </a>
+                <a href="/wallet/connect-wallet" class="textColor xsmall">
+                    <div class="side-link px-3 mt-4">
+                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                        Import Wallet
+                    </div>
+                </a>
+                <div class="mt-4 mb-2 pl-3">
+                    <small class="greyWhite2">Set Theme</small>
+                </div>
+                <div class="tabs-wrapper p-1 ml-2 mt-2" style="border-radius: 5px; width: fit-content;">
+                    
+                        <button class="Btn theme-btn blankBtn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="light">
+                            <i class="fa fa-sun-o"></i>
+                        </button>
+                        <button class="Btn theme-btn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="dark">
+                            <i class="fa fa-moon-o"></i>
+                        </button>
+                    
+
+                </div>
+            </div>
+            <div class="border-t mt-4 pt-3 pl-4">
+                <a href="/accounts/referral" class="textColor xsmall">
+                    <div class="side-link px-3 mt-2">
+                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                        Referral
+                    </div>
+                </a>
+                <a href="/accounts/logout/" class="textColor xsmall">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="0a8RAbRD5TQbhZJNH4wdXR18eoTtx4zTHjkDGPKMuta2FGUMpWkMjJiQCqAURIpT">
+                    <div class="side-link px-3 mt-4">
+                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">logout</i> &nbsp;
+                        Sign out
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+        <!-- End sidebar mobile -->
+
+
+        <div class="container-fluid" style="height: 100%;">
+            <div class="row" style="height:100%;">
+                <!-- SideBar dkp -->
+                <div class="col-md-2 sideBar sticky-top d-none d-lg-block style-scrollbar pb-4 border-r" style="padding:0px">
+                    <div class="pl-4">
+                        <a class="navbar-brand" href="/">
+                            <h5 class="textColor2 reduceH5 fixIcon2" style="font-family:'rajdhani'">
+                                <span><img src="/static/assets/images/fgh-logo.png" alt="" class="logoStyle" style="width:27px; height: 27px"></span>
+                                <b class="ml-2 fixIcon">Trustexfussion</b>
+                            </h5>
+                        </a><br>
+                    </div>
+                    <div style="font-family: 'roboto';" class="pl-2">
+                        <div class="mt-4 mb-2 pl-4">
+                            <small class="greyWhite3">Management</small>
+                        </div>
+                        <a href="/dashboard/" class="textColor2 xsmall my-2">
+                            <div class="side-link  px-3">
+                                <i class="material-icons-round fixIcon" style="font-size: 16px;">dashboard</i> &nbsp;
+                                Dashboard
+                            </div>
+                        </a>
+                        
+                        <a href="/dashboard/" class="textColor2 xsmall" data-toggle="collapse" data-target="#walletOptions">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">account_balance_wallet</i> &nbsp;
+                                Wallet
+                                <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
+                            </div>
+                        </a>
+                        <!-- wallets -->
+                        <div class="collapse" id="walletOptions">
+                            <div class="container">
+                                <div class="mt-3 ml-4">
+                                    <a href="/wallet/assets" class="greyWhite xsmall">
+                                        Balances
+                                    </a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="/wallet/deposit" class="greyWhite xsmall">
+                                        Deposit
+                                    </a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="/wallet/withdrawal" class="greyWhite xsmall">
+                                        Withdraw
+                                    </a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="/wallet/transfer" class="greyWhite xsmall">
+                                        Transfer Asset
+                                    </a>
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- Wallets end -->
+                        
+                        <a href="/dashboard/" class="textColor2 xsmall" data-toggle="collapse" data-target="#txnOptions">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">receipt_long</i> &nbsp;
+                                Transactions
+                                <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="txnOptions">
+                            <div class="container">
+                                <div class="mt-3 ml-4">
+                                    <a href="/wallet/transactions" class="greyWhite xsmall">
+                                        Pending Orders
+                                    </a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="/wallet/transaction-history" class="greyWhite xsmall">
+                                        Transaction History
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/dashboard/" class="textColor2 xsmall" data-toggle="collapse" data-target="#profileOptions">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">settings</i> &nbsp;
+                                Settings
+                                <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
+                            </div>
+                        </a>
+                        <!-- Profile -->
+                        <div class="collapse" id="profileOptions">
+                            <div class="container">
+                                <div class="mt-3 ml-4">
+                                    <a href="/accounts/account-verification/" class="greyWhite xsmall">
+                                        Verification
+                                    </a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="/accounts/payment-settings/" class="greyWhite xsmall">
+                                        Withdrawal Address
+                                    </a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="/wallet/membership-application" class="greyWhite xsmall">
+                                        Membership Card
+                                    </a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="/wallet/withdrawal-card" class="greyWhite xsmall">
+                                        Exclusive Withdrawal Card
+                                    </a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="/accounts/security-settings/" class="greyWhite xsmall">
+                                        Security Settings
+                                    </a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="/accounts/update-profile" class="greyWhite xsmall">
+                                        Profile
+                                    </a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="/accounts/register-agents/" class="greyWhite xsmall">
+                                        Register as Agent
+                                    </a>
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- Profile Ends -->
+                        <a href="/accounts/referral" class="textColor2 xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                                Referral
+                            </div>
+                        </a>
+
+                        <a href="/accounts/scam-reports/" class="textColor2 xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                                File Recovery Report
+                            </div>
+                        </a>
+                        <a href="/wallet/connect-wallet" class="textColor2 xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                                Import Wallet
+                            </div>
+                        </a>
+                        <a href="/wallet/apply-for-loan/" class="textColor2 xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                                Loans
+                            </div>
+                        </a>
+                    </div>
+                    <div style="font-family: 'roboto';" class="mt-4 pt-3 pl-2 border-t">
+                        <div class="pl-3">
+                            <small class="greyWhite3">Earn/Finance</small>
+                        </div>
+                        <a href="/invest/" class="textColor2 xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">scatter_plot</i> &nbsp;
+                                Invest
+                            </div>
+                        </a>
+                        <a href="/dashboard/investments" class="textColor2 xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">leaderboard</i> &nbsp;
+                                My Investments
+                            </div>
+                        </a>
+                        <a href="/dashboard/investments-gold/" class="textColor2 xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">leaderboard</i> &nbsp;
+                                My Golds
+                            </div>
+                        </a>
+                    </div>
+                    <div class="pl-4 mt-4">
+                        <small class="greyWhite3">Set Theme</small>
+                    </div>
+                    <div class="tabs-wrapper p-1 ml-4 mt-3" style="border-radius: 5px; width: fit-content;">
+                        
+                            <button class="Btn theme-btn blankBtn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="light">
+                                Light
+                            </button>
+                            <button class="Btn theme-btn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="dark">
+                                Dark
+                            </button>
+                        
+                    </div>
+                </div>
+                
+
+<div class="mml col-md-9 col-12 fix-mt fix-mtSm" style="padding-bottom: 60px; font-family: 'source sans pro';">
+    <div class="d-block d-sm-none mb-4">
+        <div class="row">
+            <div class="col-2">
+                <div style="width: fit-content;" class="pr-4" onclick="history.go(-1)">
+                    <span class="material-icons-round">arrow_back</span>
+                </div>
+            </div>
+            <div class="col-8 align-center">
+                <h5 class="reduceH5"><b>Account Profile</b></h5>
+            </div>
+        </div>
+    </div>
+    <!-- ## -->
+
+    <div class="row px-0 px-sm-4">
+        <div class="col-md-6 col-12">
+            <div class="post-box p-4" style="border: none;">
+                <div class="mb-4">
+                    <small class="greyWhite">Click EDIT to modify account Information</small>
+                </div>
+                <form action="" method="POST" id="updateProfileForm">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="0a8RAbRD5TQbhZJNH4wdXR18eoTtx4zTHjkDGPKMuta2FGUMpWkMjJiQCqAURIpT">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="greyWhite2">First Name</label>
+                                <input type="text" class="form-control dark-input" name="username" value="Mary" readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="greyWhite2">Last Name</label>
+                                <input type="text" class="form-control dark-input" name="last-name" value="Jane" readonly>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="greyWhite2">Country</label>
+                                <div id="countries" class="d-none">
+                                    <select id="country" name="country" class="form-control light-input" required>
+   <option value="France">France</option>
+   <option value="Afganistan">Afghanistan</option>
+   <option value="Albania">Albania</option>
+   <option value="Algeria">Algeria</option>
+   <option value="American Samoa">American Samoa</option>
+   <option value="Andorra">Andorra</option>
+   <option value="Angola">Angola</option>
+   <option value="Anguilla">Anguilla</option>
+   <option value="Antigua & Barbuda">Antigua & Barbuda</option>
+   <option value="Argentina">Argentina</option>
+   <option value="Armenia">Armenia</option>
+   <option value="Aruba">Aruba</option>
+   <option value="Australia">Australia</option>
+   <option value="Austria">Austria</option>
+   <option value="Azerbaijan">Azerbaijan</option>
+   <option value="Bahamas">Bahamas</option>
+   <option value="Bahrain">Bahrain</option>
+   <option value="Bangladesh">Bangladesh</option>
+   <option value="Barbados">Barbados</option>
+   <option value="Belarus">Belarus</option>
+   <option value="Belgium">Belgium</option>
+   <option value="Belize">Belize</option>
+   <option value="Benin">Benin</option>
+   <option value="Bermuda">Bermuda</option>
+   <option value="Bhutan">Bhutan</option>
+   <option value="Bolivia">Bolivia</option>
+   <option value="Bonaire">Bonaire</option>
+   <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+   <option value="Botswana">Botswana</option>
+   <option value="Brazil">Brazil</option>
+   <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+   <option value="Brunei">Brunei</option>
+   <option value="Bulgaria">Bulgaria</option>
+   <option value="Burkina Faso">Burkina Faso</option>
+   <option value="Burundi">Burundi</option>
+   <option value="Cambodia">Cambodia</option>
+   <option value="Cameroon">Cameroon</option>
+   <option value="Canada">Canada</option>
+   <option value="Canary Islands">Canary Islands</option>
+   <option value="Cape Verde">Cape Verde</option>
+   <option value="Cayman Islands">Cayman Islands</option>
+   <option value="Central African Republic">Central African Republic</option>
+   <option value="Chad">Chad</option>
+   <option value="Channel Islands">Channel Islands</option>
+   <option value="Chile">Chile</option>
+   <option value="China">China</option>
+   <option value="Christmas Island">Christmas Island</option>
+   <option value="Cocos Island">Cocos Island</option>
+   <option value="Colombia">Colombia</option>
+   <option value="Comoros">Comoros</option>
+   <option value="Congo">Congo</option>
+   <option value="Cook Islands">Cook Islands</option>
+   <option value="Costa Rica">Costa Rica</option>
+   <option value="Cote DIvoire">Cote DIvoire</option>
+   <option value="Croatia">Croatia</option>
+   <option value="Cuba">Cuba</option>
+   <option value="Curaco">Curacao</option>
+   <option value="Cyprus">Cyprus</option>
+   <option value="Czech Republic">Czech Republic</option>
+   <option value="Denmark">Denmark</option>
+   <option value="Djibouti">Djibouti</option>
+   <option value="Dominica">Dominica</option>
+   <option value="Dominican Republic">Dominican Republic</option>
+   <option value="East Timor">East Timor</option>
+   <option value="Ecuador">Ecuador</option>
+   <option value="Egypt">Egypt</option>
+   <option value="El Salvador">El Salvador</option>
+   <option value="Equatorial Guinea">Equatorial Guinea</option>
+   <option value="Eritrea">Eritrea</option>
+   <option value="Estonia">Estonia</option>
+   <option value="Ethiopia">Ethiopia</option>
+   <option value="Falkland Islands">Falkland Islands</option>
+   <option value="Faroe Islands">Faroe Islands</option>
+   <option value="Fiji">Fiji</option>
+   <option value="Finland">Finland</option>
+   <option value="France">France</option>
+   <option value="French Guiana">French Guiana</option>
+   <option value="French Polynesia">French Polynesia</option>
+   <option value="French Southern Ter">French Southern Ter</option>
+   <option value="Gabon">Gabon</option>
+   <option value="Gambia">Gambia</option>
+   <option value="Georgia">Georgia</option>
+   <option value="Germany">Germany</option>
+   <option value="Ghana">Ghana</option>
+   <option value="Gibraltar">Gibraltar</option>
+   <option value="Great Britain">Great Britain</option>
+   <option value="Greece">Greece</option>
+   <option value="Greenland">Greenland</option>
+   <option value="Grenada">Grenada</option>
+   <option value="Guadeloupe">Guadeloupe</option>
+   <option value="Guam">Guam</option>
+   <option value="Guatemala">Guatemala</option>
+   <option value="Guinea">Guinea</option>
+   <option value="Guyana">Guyana</option>
+   <option value="Haiti">Haiti</option>
+   <option value="Hawaii">Hawaii</option>
+   <option value="Honduras">Honduras</option>
+   <option value="Hong Kong">Hong Kong</option>
+   <option value="Hungary">Hungary</option>
+   <option value="Iceland">Iceland</option>
+   <option value="Indonesia">Indonesia</option>
+   <option value="India">India</option>
+   <option value="Iran">Iran</option>
+   <option value="Iraq">Iraq</option>
+   <option value="Ireland">Ireland</option>
+   <option value="Isle of Man">Isle of Man</option>
+   <option value="Israel">Israel</option>
+   <option value="Italy">Italy</option>
+   <option value="Jamaica">Jamaica</option>
+   <option value="Japan">Japan</option>
+   <option value="Jordan">Jordan</option>
+   <option value="Kazakhstan">Kazakhstan</option>
+   <option value="Kenya">Kenya</option>
+   <option value="Kiribati">Kiribati</option>
+   <option value="Korea North">Korea North</option>
+   <option value="Korea Sout">Korea South</option>
+   <option value="Kuwait">Kuwait</option>
+   <option value="Kyrgyzstan">Kyrgyzstan</option>
+   <option value="Laos">Laos</option>
+   <option value="Latvia">Latvia</option>
+   <option value="Lebanon">Lebanon</option>
+   <option value="Lesotho">Lesotho</option>
+   <option value="Liberia">Liberia</option>
+   <option value="Libya">Libya</option>
+   <option value="Liechtenstein">Liechtenstein</option>
+   <option value="Lithuania">Lithuania</option>
+   <option value="Luxembourg">Luxembourg</option>
+   <option value="Macau">Macau</option>
+   <option value="Macedonia">Macedonia</option>
+   <option value="Madagascar">Madagascar</option>
+   <option value="Malaysia">Malaysia</option>
+   <option value="Malawi">Malawi</option>
+   <option value="Maldives">Maldives</option>
+   <option value="Mali">Mali</option>
+   <option value="Malta">Malta</option>
+   <option value="Marshall Islands">Marshall Islands</option>
+   <option value="Martinique">Martinique</option>
+   <option value="Mauritania">Mauritania</option>
+   <option value="Mauritius">Mauritius</option>
+   <option value="Mayotte">Mayotte</option>
+   <option value="Mexico">Mexico</option>
+   <option value="Midway Islands">Midway Islands</option>
+   <option value="Moldova">Moldova</option>
+   <option value="Monaco">Monaco</option>
+   <option value="Mongolia">Mongolia</option>
+   <option value="Montserrat">Montserrat</option>
+   <option value="Morocco">Morocco</option>
+   <option value="Mozambique">Mozambique</option>
+   <option value="Myanmar">Myanmar</option>
+   <option value="Nambia">Nambia</option>
+   <option value="Nauru">Nauru</option>
+   <option value="Nepal">Nepal</option>
+   <option value="Netherland Antilles">Netherland Antilles</option>
+   <option value="Netherlands">Netherlands (Holland, Europe)</option>
+   <option value="Nevis">Nevis</option>
+   <option value="New Caledonia">New Caledonia</option>
+   <option value="New Zealand">New Zealand</option>
+   <option value="Nicaragua">Nicaragua</option>
+   <option value="Niger">Niger</option>
+   <option value="Nigeria">Nigeria</option>
+   <option value="Niue">Niue</option>
+   <option value="Norfolk Island">Norfolk Island</option>
+   <option value="Norway">Norway</option>
+   <option value="Oman">Oman</option>
+   <option value="Pakistan">Pakistan</option>
+   <option value="Palau Island">Palau Island</option>
+   <option value="Palestine">Palestine</option>
+   <option value="Panama">Panama</option>
+   <option value="Papua New Guinea">Papua New Guinea</option>
+   <option value="Paraguay">Paraguay</option>
+   <option value="Peru">Peru</option>
+   <option value="Phillipines">Philippines</option>
+   <option value="Pitcairn Island">Pitcairn Island</option>
+   <option value="Poland">Poland</option>
+   <option value="Portugal">Portugal</option>
+   <option value="Puerto Rico">Puerto Rico</option>
+   <option value="Qatar">Qatar</option>
+   <option value="Republic of Montenegro">Republic of Montenegro</option>
+   <option value="Republic of Serbia">Republic of Serbia</option>
+   <option value="Reunion">Reunion</option>
+   <option value="Romania">Romania</option>
+   <option value="Russia">Russia</option>
+   <option value="Rwanda">Rwanda</option>
+   <option value="St Barthelemy">St Barthelemy</option>
+   <option value="St Eustatius">St Eustatius</option>
+   <option value="St Helena">St Helena</option>
+   <option value="St Kitts-Nevis">St Kitts-Nevis</option>
+   <option value="St Lucia">St Lucia</option>
+   <option value="St Maarten">St Maarten</option>
+   <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
+   <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+   <option value="Saipan">Saipan</option>
+   <option value="Samoa">Samoa</option>
+   <option value="Samoa American">Samoa American</option>
+   <option value="San Marino">San Marino</option>
+   <option value="Sao Tome & Principe">Sao Tome & Principe</option>
+   <option value="Saudi Arabia">Saudi Arabia</option>
+   <option value="Senegal">Senegal</option>
+   <option value="Seychelles">Seychelles</option>
+   <option value="Sierra Leone">Sierra Leone</option>
+   <option value="Singapore">Singapore</option>
+   <option value="Slovakia">Slovakia</option>
+   <option value="Slovenia">Slovenia</option>
+   <option value="Solomon Islands">Solomon Islands</option>
+   <option value="Somalia">Somalia</option>
+   <option value="South Africa">South Africa</option>
+   <option value="Spain">Spain</option>
+   <option value="Sri Lanka">Sri Lanka</option>
+   <option value="Sudan">Sudan</option>
+   <option value="Suriname">Suriname</option>
+   <option value="Swaziland">Swaziland</option>
+   <option value="Sweden">Sweden</option>
+   <option value="Switzerland">Switzerland</option>
+   <option value="Syria">Syria</option>
+   <option value="Tahiti">Tahiti</option>
+   <option value="Taiwan">Taiwan</option>
+   <option value="Tajikistan">Tajikistan</option>
+   <option value="Tanzania">Tanzania</option>
+   <option value="Thailand">Thailand</option>
+   <option value="Togo">Togo</option>
+   <option value="Tokelau">Tokelau</option>
+   <option value="Tonga">Tonga</option>
+   <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+   <option value="Tunisia">Tunisia</option>
+   <option value="Turkey">Turkey</option>
+   <option value="Turkmenistan">Turkmenistan</option>
+   <option value="Turks & Caicos Is">Turks & Caicos Is</option>
+   <option value="Tuvalu">Tuvalu</option>
+   <option value="Uganda">Uganda</option>
+   <option value="United Kingdom">United Kingdom</option>
+   <option value="Ukraine">Ukraine</option>
+   <option value="United Arab Erimates">United Arab Emirates</option>
+   <option value="United States of America">United States of America</option>
+   <option value="Uraguay">Uruguay</option>
+   <option value="Uzbekistan">Uzbekistan</option>
+   <option value="Vanuatu">Vanuatu</option>
+   <option value="Vatican City State">Vatican City State</option>
+   <option value="Venezuela">Venezuela</option>
+   <option value="Vietnam">Vietnam</option>
+   <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+   <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+   <option value="Wake Island">Wake Island</option>
+   <option value="Wallis & Futana Is">Wallis & Futana Is</option>
+   <option value="Yemen">Yemen</option>
+   <option value="Zaire">Zaire</option>
+   <option value="Zambia">Zambia</option>
+   <option value="Zimbabwe">Zimbabwe</option>
+</select>
+                                </div>
+                                <input type="text" class="form-control dark-input country-blank" value="France" readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="greyWhite2">Phone Number</label>
+                                <input type="text" class="form-control dark-input" name="phone-number" value="" readonly>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="greyWhite2">Address</label>
+                        <input type="text" class="form-control dark-input" name="address" value="" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="greyWhite2">Employment Status</label>
+                        <input type="text" class="form-control dark-input employment-blank" value="" readonly>
+                        <div class="employment-options d-none">
+                            <select name="employment-status" class="form-control dark-input">
+                                <option value="Worker">Worker</option>
+                                <option value="Employee">Employee</option>
+                                <option value="Self-employed">Self-employed</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt-4 row">
+                        <div class="col-6">
+                            <button type="button" class="BtnDark py-2 xsmall" onclick="allowEdit(this)">
+                                <span class="material-icons-round fixIcon" style="font-size: 14px;">edit</span>
+                                Edit
+                            </button>
+                        </div>
+                        <div class="col-12 d-none" id="saveBtn">
+                            <button type="submit" class="Btn save-btn">
+                                Save Changes
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- == -->
+
+    <div class="dialog" id="investLoader" style="background: rgba(0, 0, 0, 0.8); display: block;">
+        <div class="dialogContent" style="background: none; box-shadow: none; padding: 0px;">
+            <div style="border-radius: 4px;" id="dialogContentInner" class="align-center dark-bg p-4">
+                <h5 class="reduceH5">
+                    Account Verification Required
+                </h5>
+                <p class="greyWhite xsmall">
+                   Please complete identity verification to access all our services
+                </p>
+                <div class="mt-4">
+                    <a href="account-verification">
+                        <button class="Btn">Verify Now</button>
+                    </a>
+                </div>
+                <div class="mt-3">
+                    <a href="/dashboard/" class="greyWhite2 boldText">
+                        Cancel
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- == -->
+
+
+
+<!-- jS -->
+<script src="/static/vendor/jquery/jquery.js"></script>
+<script>
+    const allowEdit=(e)=>{
+        $('.form-control').each(function(){
+            $(this).attr('readonly', false)
+        })
+
+        $('.country-blank').hide()
+        $('.employment-blank').hide()
+        $('.employment-options').removeClass('d-none')
+        $('#countries').removeClass('d-none')
+        // ==>
+        $(e).hide()
+        $('#saveBtn').removeClass('d-none')
+    }
+</script>
+
+<script>
+    $('#updateProfileForm').on('submit', (target)=>{
+        target.preventDefault()
+        $('.save-btn').html('<i class="fa fa-spin fa-spinner"></i> &nbsp; Saving changes...');
+
+        setTimeout(function(){
+            $('#updateProfileForm').unbind('submit').submit();
+            $('.save-btn').html('Save Changes');
+        },2000)
+    });
+
+</script>
+  
+
+            </div>
+        </div>
+    </div>
+    
+<!-- account control panel -->
+<div class="account-control-panel-overlay" style="display: none;" onclick="closeAccountMangt()"></div>
+<div class="account-control-panel post-box" style="padding: 0px; display: none; box-shadow: none; font-family: 'source sans pro';">
+    <div class="row pb-2 p-3">
+        <div class="col-2">
+            <div class="fit-content py-1 px-2 post-box">
+                <span class="material-icons-outlined fixIcon2">
+                    person
+                </span>
+            </div>
+        </div>
+        <div class="col-10 pl-4">
+            <h5 class="moreWhite reduceH5">
+                <span class="greenText">Hello! Mary</span> <br>
+                <small class="greyWhite">james@gmail.com</small>
+            </h5>
+        </div>
+        <div class="col-10 pl-4">
+            <h5 class="moreWhite reduceH5">
+                <small class="greyWhite">Account Type: Single Account</small>
+            </h5>
+        </div>
+        
+        <div class="mt-3 col-12 align-center">
+            <small class="xsmall greyWhite">Spot Balance</small><br>
+            <h5>$0.00</h5>
+        </div>
+    </div>
+    <div class="border-t">
+        <a href="/accounts/security-settings/" class="mainWhite">
+            <div class="a-p-inner px-3 py-1 mt-3 textColor">
+                <i class="material-icons-outlined fixIcon3" style="font-size: 18px;">lock</i>&nbsp;&nbsp;
+                Security
+            </div>
+        </a>
+        <a href="/accounts/account-verification/" class="mainWhite">
+            <div class="a-p-inner px-3 py-1 mt-3 textColor">
+                <i class="material-icons-outlined fixIcon3" style="font-size: 18px;">fact_check</i>&nbsp;&nbsp;
+                Verification
+                
+                &nbsp;<span class="badge badge-danger">1</span>
+                
+            </div>
+        </a>
+        <a href="/wallet/assets" class="mainWhite">
+            <div class="a-p-inner px-3 py-1 mt-3 textColor">
+                <i class="material-icons-outlined fixIcon3" style="font-size: 18px;">account_balance_wallet</i>&nbsp;&nbsp;
+                Wallet
+            </div>
+        </a>
+        
+        <a href="/accounts/logout/" class="textColor">
+            <div class="a-p-inner p-3 mt-3 border-t">
+               <input type="hidden" name="csrfmiddlewaretoken" value="0a8RAbRD5TQbhZJNH4wdXR18eoTtx4zTHjkDGPKMuta2FGUMpWkMjJiQCqAURIpT">
+               <i class="material-icons-outlined fixIcon3" style="font-size: 18px;">logout</i>&nbsp;&nbsp;
+                Sign out
+            </div>
+        </a>
+    </div>
+</div>
+
+<script>
+    // account management modal
+    const accountMangt = (e)=>{
+        $('.account-control-panel-overlay').show()
+        $('.account-control-panel').show('slide', {direction:'up'}, 200)
+        // $(e).attr('onclick', 'closeAccountMangt(this)')
+    }
+    const closeAccountMangt = (e)=>{
+        $('.account-control-panel-overlay').hide()
+        $('.account-control-panel').hide('slide', {direction:'up'}, 200)
+        $(e).attr('onclick', 'accountMangt(this)')
+        $('.accountMangtBtn').each(function(){
+            $(this).attr('onclick', 'accountMangt(this)')
+        })
+    }
+</script>
+    <div class="modal fade" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="notificationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div style="background-color: #0ac989;" class="modal-header">
+                    <h5 class="modal-title" id="notificationModalLabel">Notifications</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div style="background-color: black;" class="modal-body" id="notificationModalBody">
+                    
+                </div>
+                <div style="background-color: black;" class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Google Translate Element -->
+            <div class="translate-container">
+              <div id="google_translate_element"></div>
+            </div>
+            
+            <!-- Google Translate Script -->
+            <script type="text/javascript">
+              function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                  { pageLanguage: 'en' }, 
+                  'google_translate_element'
+                );
+              }
+            </script>
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            
+            <!-- Styling -->
+            <style>
+              .translate-container {
+                position: fixed;
+                bottom: 20px;
+                left: 20px;
+                background-color: #32874d;
+                padding: 6px 6px;
+                border-radius: 6px;
+                border: 1px solid #ccc;
+                z-index: 1000;
+                font-family: Arial, sans-serif;
+                box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+              }
+            
+              #google_translate_element {
+                display: inline-block;
+                line-height: 1.2;
+              }
+            
+              /* Style the default dropdown */
+              .goog-te-combo {
+                padding: 5px 8px;
+                font-size: 13px;
+                border-radius: 4px;
+                border: 1px solid #bbb;
+                background-color: #32874d;
+                color: #fff;
+                cursor: pointer;
+              }
+            
+              /* Optional: Hide Google branding (may violate their TOS) */
+              .goog-logo-link,
+              .goog-te-gadget span {
+                display: none !important;
+              }
+            
+              .goog-te-gadget {
+                color: transparent !important;
+                white-space: nowrap;
+              }
+            </style>
+
+    <div class="modal fade" id="aboutLoan" tabindex="-1" aria-labelledby="aboutLoan" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content mx-4" style="background: none;">
+                <div class="modal-body py-4 modal-bg">
+                    <h5 class="site-yellow">Trustexfussion Trading Loans</h5>
+                    <p class="greyWhite xsmall">
+                        Get a 50% loan capital for your investment. The other 50% will be charged from your spot wallet.
+                    </p>
+                    <p class="greyWhite xsmall">
+                        This project was designed to aid users who can provide up to 50% of the amount required for a trading package. Trustexfussion will borrow users a 50% principal to enter the trading market.
+                    </p>
+                    <p class="greyWhite xsmall">
+                        Trade still operates in its full capacity while on loan. The loan fee will be estimated and charged on redemption of the investment.
+                    </p>
+                    <p class="greyWhite xsmall">
+                        To use this feature just click on the <b>Apply loan</b> button to activate it. To disable it, just click the button again.
+                    </p>
+                    <div class="mt-4">
+                        <button class="BtnDark" aria-colspan="xsmall" data-dismiss="modal">
+                            OK
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="/static/vendor/jquery/jquery.js"></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/docs/js/main.js"></script>
+    <script src="/static/assets/plugin/jquery/jquery-ui.min.js"></script>
+    
+    
+
+    <script>
+        $('#dAmount').on('change', function() {
+        this.value = parseFloat(this.value).toFixed(2);
+    });
+    </script>
+    <script>
+        $(document).on('click', 'a[href^="#"]', function (event) {
+                event.preventDefault();
+
+                $('html, body').animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top
+                }, 1000);
+            });
+    </script>
+    <!-- Smartsupp Live Chat script -->
+    <script type="text/javascript">
+        var _smartsupp = _smartsupp || {};
+        _smartsupp.key = '278ffd698b09b356eaee29727d3461c65d5f431c';
+        window.smartsupp||(function(d) {
+        var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+        s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+        c.type='text/javascript';c.charset='utf-8';c.async=true;
+        c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+        })(document);
+    </script>
+    <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+    <script>
+        const setTheme = (e)=>{
+            $('#theme').prop('href', `/static/docs/css/${e.id}.css`)
+
+            // icons
+            $('.theme-btn').each(function(){
+                $(this).addClass('blankBtn');
+                $(e).removeClass('blankBtn')
+            })
+
+            // update backend
+            $.ajax({
+                type: "POST",
+                url: "/accounts/changeTheme/" + e.id,
+                data: "",
+                dataType: "dataType",
+                success: function (response) {
+                    
+                }
+            });
+        }
+    </script>
+</body>
+</html>

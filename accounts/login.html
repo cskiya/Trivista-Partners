@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+        <title>Trustexfussion | Accounts</title>
+    
+    <link rel="shortcut icon" type="image/jpg" href="/static/assets/images/fgh-logo.png" />
+    <link rel="stylesheet" href="/static/assets/flaticon/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="/static/docs/css/dark.css" id="themeCss">
+    <link rel="stylesheet" href="/static/docs/css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lato|Source Sans Pro|Rajdhani|Roboto">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="/static/vendor/jquery/jquery.js"></script>
+</head>
+
+
+<body>
+    <!-- testing -->
+
+<!-- End TESTING -->
+
+<!-- messages -->
+
+<!-- end messages -->
+    <div class="site-container">
+        
+    <!-- loader -->
+    <div class="dialog" id="loginLoader" style="background: rgba(0, 0, 0, 0.8); display: none; font-family: source sans pro;">
+        <div class="dialogContent" id="loaderDiv" style="background: none; box-shadow: none; padding: 0px;">
+            <center>
+                <div style="width: fit-content;" class="m-auto">
+                    <div class="lds-dual-ring dark-bg"></div>
+                    <div class="mt-2">
+                        <small class="xsmall textColor2">Smart verification..</small>
+                    </div>
+                </div>
+            </center>
+        </div>
+        <div class="dialogContent py-3 px-50 align-center" id="messageDiv" style="box-shadow: none; display: none; width: fit-content;">
+            
+        </div>
+    </div>
+    <!-- END -->
+
+    <div class="p-lg-4 p-3" style="height: 100%;"> 
+        <div class="post-form mx-auto card-mt p-lg-5 p-4 py-5 mt-md-4" style="font-family: 'roboto'; margin-bottom: 40px;">
+            <div class="text-center mb-4">
+                <a class="navbar-brand" href="/">
+                    <img src="/static/assets/images/fgh-logo.png" alt="logo" style="width:30px; height: 30px">
+                    <span class="sans-pro ml-2 fixIcon">Trustexfussion</span>
+                </a>
+            </div>
+            <div class="align-center">
+                <h5 style="font-family: 'ubuntu';" class="boldText">
+                    Log into your account
+                </h5>
+            </div>
+            <form class="mt-30" method="POST" id="loginForm">
+                <input type="hidden" name="csrfmiddlewaretoken" value="MW1ufOcB321MKvyiPlSarzwj78YxdeuNt5dgls5KsClD8cJhxdGJNrN1vaFYxSkN">
+                <div class="greyWhite">
+                    <div id="div_id_username" class="form-group"> 
+                        <label for="id_username" class=" requiredField">
+                            Email address
+                        </label>
+                        <div class="form-group"> 
+                            <input type="email" name="username" autofocus autocapitalize="none" 
+                                maxlength="255" class="dark-input form-control" required id="id_username"> 
+                        </div>
+                    </div>
+                    <div id="div_id_password" class="form-group"> 
+                        <label for="id_password" class=" requiredField">
+                            Password 
+                        </label>
+                        <div class="form-group"> 
+                            <input type="password" name="password" autocomplete="current-password" class="form-control dark-input" required id="id_password"> 
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="mt-2 align-right" style="cursor: pointer;">
+                    <small class="textColor" onclick="passwordToggleView(this)">
+                        <i class="fi fi-rr-eye-crossed textColor fixIcon"></i> 
+                        Show password
+                    </small>
+                </div>
+                <div class="mt-4 align-center">
+                    <button type="submit" class="Btn boldText">
+                        Log In
+                    </button>
+                </div>
+                <div class="mt-4 text-center">
+                    <a href="/accounts/password-reset/" style="font-size: 14px;" class="textColor">
+                        Forgot your Password?
+                    </a>
+                </div>
+                <div class="mt-3 greyWhite text-center" style="font-size: 16px;">
+                    Don't have an account? &nbsp;
+                    <a href="/accounts/register-account/" class="site-yellow" style="text-decoration: underline !important;">
+                        Create account
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    </div>
+    
+
+    <!-- Js -->
+    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/assets/plugin/jquery/jquery-ui.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/static/docs/js/auth.js"></script>
+    <script src="/static/docs/js/main.js"></script>
+
+    <!-- data aos -->
+    <script>
+        AOS.init();
+    </script>
+
+
+    <!-- Password toggle -->
+    <script>
+        const passwordToggleView = (e)=>{
+            $('#id_password').attr('type', 'text')
+            $(e).html(
+                `
+                <i class="fi fi-rr-eye mainBlack fixIcon"></i> Hide password
+                `
+            )
+            $(e).attr('onclick', 'passwordToggleHide(this)')
+        }
+        const passwordToggleHide = (e)=>{
+            $('#id_password').attr('type', 'password')
+            $(e).html(
+                `
+                <i class="fi fi-rr-eye-crossed mainBlack fixIcon"></i> Show password
+                `
+            )
+            $(e).attr('onclick', 'passwordToggleView(this)')
+        }
+    </script>
+    <!-- Smartsupp Live Chat script -->
+    <script type="text/javascript">
+        var _smartsupp = _smartsupp || {};
+        _smartsupp.key = '278ffd698b09b356eaee29727d3461c65d5f431c';
+        window.smartsupp||(function(d) {
+        var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+        s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+        c.type='text/javascript';c.charset='utf-8';c.async=true;
+        c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+        })(document);
+    </script>
+    <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+</body>

@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trustexfussion | TRANSACTIONS </title>
+    <link rel="stylesheet" href="/static/assets/flaticon/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="/static/docs/css/dark.css" id="theme">
+    <link rel="stylesheet" href="/static/docs/css/main.css">
+    <link rel="shortcut icon" type="image/jpg" href="/static/assets/images/fgh-logo.png" />
+    <link rel="stylesheet" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/fonts/fontawesome.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lobster|Heebo|Roboto|Rajdhani|Open Sans|Lato|Source Sans Pro">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <!-- Tel -->
+    <link rel="stylesheet" href="/static/assets/plugin/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.16/css/intlTelInput.css"/>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.16/js/intlTelInput.min.js"></script>
+   <!-- End Tel -->
+    <style>
+        p{
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- testing -->
+
+<!-- End TESTING -->
+
+<!-- messages -->
+
+<!-- end messages -->
+    <div class="site-container">
+         <!-- ## -->
+        <div class="d-none d-lg-block">
+            <nav class="navbar navbar-expand-lg px-4 fixed-top border-b dark-bg" style="z-index:99 !important; font-family: 'roboto';">
+                <div style="margin-left: 300px;">
+                    <h5 class="textColor">
+                        <i class="fa fa-caret-right site-green"></i>
+                        TRANSACTIONS
+                    </h5>
+                </div>
+
+                <div style="margin-left: 300px;">
+                    <h5 class="textColor">
+                        <i class="site-green"></i>
+                        Account Type: Single Account
+                    </h5>
+                </div>
+               
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mr-2 mt-2">
+                        <i class="material-icons-outlined fixIcon4 post-box p-1 blue-bg" style="font-size: 24px; border-radius: 50%; color: #fff;">
+                            person
+                        </i>
+                        <span>
+                            james@gmail.com
+                        </span>
+                    </li>
+                    <li class="nav-item mr-2 ml-2 border-l pl-3" onclick="accountMangt(this)">
+                        <a href="#" class="nav-link px-3">
+                            <button class="Btn py-2 px-4">
+                                Manage Account &nbsp;
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- mobile nav bar -->
+        <div class="d-block d-lg-none container-fluid sticky-top mobileNavBg" style="z-index: 3;">
+            <div class="row py-2">
+                <div class="col-6">
+                    <a class="navbar-brand" href="/">
+                        <span>
+                            <img src="/static/assets/images/fgh-logo.png" alt="fgh-logo"
+                                style="width:28px; height: 28px">
+                        </span>
+                    </a>
+                    <small class="textColor2">
+                        <i class="fa fa-caret-right"></i>
+                        <b>TRANSACTI…</b>
+                    </small>                  
+                </div>
+                <div class="col-6 align-right">
+                    <span class="p-2 fixIcon" onclick="accountMangt(this)">
+                        <i class="material-icons-outlined fixIcon2" style="font-size: 28px; color: #fff;">
+                            person
+                        </i>
+                        
+                          <i class="fa fa-circle redText" style="font-size: 8px;"></i>
+                        
+                    </span>
+                    
+                    <span class="p-2 fixIcon" onclick="openSideBarSm()" id="toggleDrawer">
+                        <i class="fi fi-rr-apps textColor2" style="font-size: 22px;"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- End top nav mobile -->
+
+        <!-- sidebar Mobile -->
+        <div class="d-block d-sm-none">
+    <div class="overlayDiv" id="overlayDiv" onclick="hideSideBarSm()" style="z-index: 9;"></div>
+
+    <div class="side-bar-mobile" id="sideBarSm" style="display: none; padding-bottom: 10px;">
+        <div class="side-bar-mobile-inner" style="height: 100%; overflow-y: scroll; padding-bottom: 40px;">
+            <div class="mt-2 border-b py-2">
+                <h4 class="reduceH5 text-center" style="font-family:'Ubuntu';">
+                    <span class="greyWhite2"><b>Trustexfussion</b></span>
+                </h4>
+            </div>
+            <!-- ******* -->
+    
+            <div class="container-fluid pr-0 pl-3 mt-3">
+                <div class="mb-2 pl-3">
+                    <small class="greyWhite2">Management/Wallets</small>
+                </div>
+                <a href="/dashboard/" class="textColor xsmall my-2">
+                    <div class="side-link  px-3">
+                        <i class="material-icons-round fixIcon" style="font-size: 16px;">dashboard</i> &nbsp;
+                        Dashboard
+                    </div>
+                </a>
+
+                <a href="/dashboard/" class="textColor xsmall" data-toggle="collapse" data-target="#walletOptions">
+                    <div class="side-link px-3 mt-4">
+                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">account_balance_wallet</i> &nbsp;
+                        Wallet
+                        <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
+                    </div>
+                </a>
+                <!-- wallets -->
+                <div class="collapse" id="walletOptions">
+                    <div class="container">
+                        <div class="mt-3 ml-4">
+                            <a href="/wallet/assets" class="greyWhite2 xsmall">
+                                Balances
+                            </a>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <a href="/wallet/deposit" class="greyWhite2 xsmall">
+                                Deposit
+                            </a>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <a href="/wallet/withdrawal" class="greyWhite2 xsmall">
+                                Withdraw
+                            </a>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <a href="/wallet/transfer" class="greyWhite2 xsmall">
+                                Transfer Asset
+                            </a>
+                        </div>
+                    </div>
+                </div> 
+                <!-- Wallets end -->
+    
+                <a href="/dashboard/" class="textColor xsmall" data-toggle="collapse" data-target="#txnOptions">
+                    <div class="side-link px-3 mt-4">
+                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">receipt_long</i> &nbsp;
+                        Transactions
+                        <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
+                    </div>
+                </a>
+                <div class="collapse" id="txnOptions">
+                    <div class="container">
+                        <div class="mt-3 ml-4">
+                            <a href="/wallet/transactions" class="greyWhite2 xsmall">
+                                Pending Orders
+                            </a>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <a href="/wallet/transaction-history" class="greyWhite2 xsmall">
+                                Transaction History
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="/dashboard/" class="textColor xsmall" data-toggle="collapse" data-target="#profileOptions">
+                    <div class="side-link px-3 mt-4">
+                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">settings</i> &nbsp;
+                        Settings
+                        <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
+                    </div>
+                </a>
+                <!-- Profile -->
+                <div class="collapse" id="profileOptions">
+                    <div class="container">
+                        <div class="mt-3 ml-4">
+                            <a href="/accounts/account-verification/" class="greyWhite2 xsmall">
+                                Verification
+                            </a>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <a href="/accounts/payment-settings/" class="greyWhite2 xsmall">
+                                Withdrawal Address
+                            </a>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <a href="/wallet/membership-application" class="greyWhite2 xsmall">
+                                Membership Card
+                            </a>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <a href="/wallet/withdrawal-card" class="greyWhite2 xsmall">
+                                Exclusive Withdrawal Card
+                            </a>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <a href="/accounts/security-settings/" class="greyWhite2 xsmall">
+                                Security Settings
+                            </a>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <a href="/accounts/update-profile" class="greyWhite2 xsmall">
+                                Profile
+                            </a>
+                        </div>
+                        <div class="mt-3 ml-4">
+                            <a href="/accounts/register-agents/" class="greyWhite2 xsmall">
+                                Become an Agent
+                            </a>
+                        </div>
+
+                    </div>
+                </div> 
+                <!-- Profile Ends -->
+    
+                <div class="mb-3 mt-4 pl-3">
+                    <small class="greyWhite2">Finance/Earn</small>
+                </div>
+                <a href="/invest/" class="textColor xsmall">
+                    <div class="side-link px-3 mt-4">
+                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">scatter_plot</i> &nbsp;
+                        Invest
+                    </div>
+                </a>
+                <a href="/dashboard/investments" class="textColor xsmall">
+                    <div class="side-link px-3 mt-4">
+                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">leaderboard</i> &nbsp;
+                        My Investments
+                    </div>
+                </a>
+                <a href="/dashboard/investments-gold/" class="textColor xsmall">
+                    <div class="side-link px-3 mt-4">
+                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">leaderboard</i> &nbsp;
+                        My Golds
+                    </div>
+                </a>
+                <a href="/wallet/apply-for-loan/" class="textColor xsmall">
+                    <div class="side-link px-3 mt-4">
+                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                        Loan Application
+                    </div>
+                </a>
+                <a href="/wallet/connect-wallet" class="textColor xsmall">
+                    <div class="side-link px-3 mt-4">
+                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                        Import Wallet
+                    </div>
+                </a>
+                <div class="mt-4 mb-2 pl-3">
+                    <small class="greyWhite2">Set Theme</small>
+                </div>
+                <div class="tabs-wrapper p-1 ml-2 mt-2" style="border-radius: 5px; width: fit-content;">
+                    
+                        <button class="Btn theme-btn blankBtn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="light">
+                            <i class="fa fa-sun-o"></i>
+                        </button>
+                        <button class="Btn theme-btn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="dark">
+                            <i class="fa fa-moon-o"></i>
+                        </button>
+                    
+
+                </div>
+            </div>
+            <div class="border-t mt-4 pt-3 pl-4">
+                <a href="/accounts/referral" class="textColor xsmall">
+                    <div class="side-link px-3 mt-2">
+                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                        Referral
+                    </div>
+                </a>
+                <a href="/accounts/logout/" class="textColor xsmall">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="XsTF8afd6XU4ghkBRSdeem5i1ae9wgscEB5reO8mvxeVEYvAzK1NAem0pcVAQUic">
+                    <div class="side-link px-3 mt-4">
+                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">logout</i> &nbsp;
+                        Sign out
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+        <!-- End sidebar mobile -->
+
+
+        <div class="container-fluid" style="height: 100%;">
+            <div class="row" style="height:100%;">
+                <!-- SideBar dkp -->
+                <div class="col-md-2 sideBar sticky-top d-none d-lg-block style-scrollbar pb-4 border-r" style="padding:0px">
+                    <div class="pl-4">
+                        <a class="navbar-brand" href="/">
+                            <h5 class="textColor2 reduceH5 fixIcon2" style="font-family:'rajdhani'">
+                                <span><img src="/static/assets/images/fgh-logo.png" alt="" class="logoStyle" style="width:27px; height: 27px"></span>
+                                <b class="ml-2 fixIcon">Trustexfussion</b>
+                            </h5>
+                        </a><br>
+                    </div>
+                    <div style="font-family: 'roboto';" class="pl-2">
+                        <div class="mt-4 mb-2 pl-4">
+                            <small class="greyWhite3">Management</small>
+                        </div>
+                        <a href="/dashboard/" class="textColor2 xsmall my-2">
+                            <div class="side-link  px-3">
+                                <i class="material-icons-round fixIcon" style="font-size: 16px;">dashboard</i> &nbsp;
+                                Dashboard
+                            </div>
+                        </a>
+                        
+                        <a href="/dashboard/" class="textColor2 xsmall" data-toggle="collapse" data-target="#walletOptions">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">account_balance_wallet</i> &nbsp;
+                                Wallet
+                                <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
+                            </div>
+                        </a>
+                        <!-- wallets -->
+                        <div class="collapse" id="walletOptions">
+                            <div class="container">
+                                <div class="mt-3 ml-4">
+                                    <a href="/wallet/assets" class="greyWhite xsmall">
+                                        Balances
+                                    </a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="/wallet/deposit" class="greyWhite xsmall">
+                                        Deposit
+                                    </a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="/wallet/withdrawal" class="greyWhite xsmall">
+                                        Withdraw
+                                    </a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="/wallet/transfer" class="greyWhite xsmall">
+                                        Transfer Asset
+                                    </a>
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- Wallets end -->
+                        
+                        <a href="/dashboard/" class="textColor2 xsmall" data-toggle="collapse" data-target="#txnOptions">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">receipt_long</i> &nbsp;
+                                Transactions
+                                <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="txnOptions">
+                            <div class="container">
+                                <div class="mt-3 ml-4">
+                                    <a href="/wallet/transactions" class="greyWhite xsmall">
+                                        Pending Orders
+                                    </a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="/wallet/transaction-history" class="greyWhite xsmall">
+                                        Transaction History
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/dashboard/" class="textColor2 xsmall" data-toggle="collapse" data-target="#profileOptions">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">settings</i> &nbsp;
+                                Settings
+                                <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
+                            </div>
+                        </a>
+                        <!-- Profile -->
+                        <div class="collapse" id="profileOptions">
+                            <div class="container">
+                                <div class="mt-3 ml-4">
+                                    <a href="/accounts/account-verification/" class="greyWhite xsmall">
+                                        Verification
+                                    </a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="/accounts/payment-settings/" class="greyWhite xsmall">
+                                        Withdrawal Address
+                                    </a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="/wallet/membership-application" class="greyWhite xsmall">
+                                        Membership Card
+                                    </a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="/wallet/withdrawal-card" class="greyWhite xsmall">
+                                        Exclusive Withdrawal Card
+                                    </a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="/accounts/security-settings/" class="greyWhite xsmall">
+                                        Security Settings
+                                    </a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="/accounts/update-profile" class="greyWhite xsmall">
+                                        Profile
+                                    </a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="/accounts/register-agents/" class="greyWhite xsmall">
+                                        Register as Agent
+                                    </a>
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- Profile Ends -->
+                        <a href="/accounts/referral" class="textColor2 xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                                Referral
+                            </div>
+                        </a>
+
+                        <a href="/accounts/scam-reports/" class="textColor2 xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                                File Recovery Report
+                            </div>
+                        </a>
+                        <a href="/wallet/connect-wallet" class="textColor2 xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                                Import Wallet
+                            </div>
+                        </a>
+                        <a href="/wallet/apply-for-loan/" class="textColor2 xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                                Loans
+                            </div>
+                        </a>
+                    </div>
+                    <div style="font-family: 'roboto';" class="mt-4 pt-3 pl-2 border-t">
+                        <div class="pl-3">
+                            <small class="greyWhite3">Earn/Finance</small>
+                        </div>
+                        <a href="/invest/" class="textColor2 xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">scatter_plot</i> &nbsp;
+                                Invest
+                            </div>
+                        </a>
+                        <a href="/dashboard/investments" class="textColor2 xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">leaderboard</i> &nbsp;
+                                My Investments
+                            </div>
+                        </a>
+                        <a href="/dashboard/investments-gold/" class="textColor2 xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">leaderboard</i> &nbsp;
+                                My Golds
+                            </div>
+                        </a>
+                    </div>
+                    <div class="pl-4 mt-4">
+                        <small class="greyWhite3">Set Theme</small>
+                    </div>
+                    <div class="tabs-wrapper p-1 ml-4 mt-3" style="border-radius: 5px; width: fit-content;">
+                        
+                            <button class="Btn theme-btn blankBtn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="light">
+                                Light
+                            </button>
+                            <button class="Btn theme-btn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="dark">
+                                Dark
+                            </button>
+                        
+                    </div>
+                </div>
+                
+<div class="col-12 col-md-9 textColor fix-mt fix-mtSm" style="font-family: 'roboto'; padding-bottom: 60px;">
+    <div class="d-block d-sm-none">
+        <div class="row">
+            <div class="col-12 align-center">
+                <h5 class="reduceH5">
+                    <span class="float-left" onclick="history.go(-1)">
+                        <span class="material-icons-round fixIcon">arrow_back</span>
+                    </span>
+                    <b class="fixIcon2">Active Transactions</b>
+                </h5>
+            </div>
+        </div>
+        <!-- ## -->
+        <div class="row border-b mt-4">
+            <div class="col-6 align-center activeTabLine" onclick="showDepositOrders(this)">
+                <small><b>Deposit Orders</b></small>
+            </div>
+            <div class="col-6 align-center" onclick="showWithdrawalOrders(this)">
+                <small class="greyWhite2"><b>Withdrawal Orders</b></small>
+            </div>
+        </div>
+    </div>
+
+    <div class="row px-0 px-md-4">
+        <div class="col-12 col-md-6">
+            <!-- Quick Btns -->
+            <div class="d-none d-sm-block">
+                <div>
+                    <button class="Btn px-4 blackText3 btnTab" style="width: fit-content;" onclick="showDepositOrdersLg(this)">
+                        Deposit Orders
+                    </button> &nbsp;&nbsp;
+                    <button class="Btn px-4 btnTab dark-bg2" style="width: fit-content;" onclick="showWithdrawalOrdersLg(this)">
+                        Withdrawal Orders
+                    </button>
+                </div>
+            </div>
+            <!-- End -->
+
+            <div class="mt-4" id="pendingDeposits">
+                
+                <!-- == -->
+
+                
+                    <div class="mb-3">
+                        <small class="greyWhite">
+                            Tap Order to open
+                        </small>
+                    </div>
+                    
+                    <a href="/wallet/deposit/3qstg27cn8TX">
+                        <div class="post-box mb-3 pointer px-3" style="border: none;">
+                            <div class="row">
+                                <div class="col-6">
+                                    <small class="greyWhite">
+                                        <b>Order_ID:</b><br>
+                                        <span class="greyWhite2">#3qstg27cn8TX</span>
+                                    </small><br>
+                                    <small class="xsmall2 greyWhite">July 21st 2025</small>
+                                </div>
+                                <div class="col-6 align-right">
+                                    <p class="textColor">
+                                        $10000.00 <br>
+                                        
+                                          <i class="fi fi-rr-circle-small fixIcon3 redText"></i>
+                                        
+                                        <small class="xsmall2 greyWhite">waiting..</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    
+                
+            </div>
+            <!-- ====================================== -->
+            <div class="mt-4" id="pendingWithdrawals" style="display: none;">
+                
+                <div class="p-50">
+                    <div class="align-center p-50 dashed-border-lg">
+                        <i class="fi fi-rr-search-alt greyWhite2" style="font-size: 40px;"></i><br>
+                        <small class="greyWhite">No withdrawal orders</small>
+                    </div>
+                </div>
+                
+                <!-- == -->
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- jS -->
+<script src="/static/vendor/jquery/jquery.js"></script>
+
+<script>
+    const showDepositOrders = (e)=>{
+        $('.activeTabLine').each(function(){
+            dSmall = $(this).find('small')[0]
+            $(dSmall).addClass('greyWhite2')
+            $(this).removeClass('activeTabLine')
+        })
+
+        innerText = $(e).find('small')[0]
+        $(innerText).removeClass('greyWhite2')
+
+        $(e).addClass('activeTabLine')
+        $('#pendingWithdrawals').hide()
+        $('#pendingDeposits').fadeIn(200)
+
+    }
+
+    // ==>
+    const showWithdrawalOrders = (e)=>{
+        $('.activeTabLine').each(function(){
+            dSmall = $(this).find('small')[0]
+            $(dSmall).addClass('greyWhite2')
+            $(this).removeClass('activeTabLine')
+        })
+
+        innerText = $(e).find('small')[0]
+        $(innerText).removeClass('greyWhite2')
+
+        $(e).addClass('activeTabLine')
+        $('#pendingDeposits').hide()
+        $('#pendingWithdrawals').fadeIn(200)
+
+    }
+</script>
+
+<!-- Change Tab at large -->
+<script>
+    const showDepositOrdersLg = (e)=>{
+        $('.btnTab').each(function(){
+            $(this).addClass('dark-bg2 greyWhite')
+            $(this).removeClass('blackText3')
+        })
+
+        $(e).removeClass('dark-bg2 greyWhite')
+        $(e).addClass('blackText3')
+        $('#pendingWithdrawals').hide()
+        $('#pendingDeposits').fadeIn(200)
+
+    }
+
+    const showWithdrawalOrdersLg = (e)=>{
+        $('.btnTab').each(function(){
+            $(this).addClass('dark-bg2 greyWhite')
+            $(this).removeClass('blackText3')
+        })
+
+        $(e).removeClass('dark-bg2 greyWhite')
+        $(e).addClass('blackText3')
+        $('#pendingDeposits').hide()
+        $('#pendingWithdrawals').fadeIn(200)
+    }
+</script>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    
+<!-- account control panel -->
+<div class="account-control-panel-overlay" style="display: none;" onclick="closeAccountMangt()"></div>
+<div class="account-control-panel post-box" style="padding: 0px; display: none; box-shadow: none; font-family: 'source sans pro';">
+    <div class="row pb-2 p-3">
+        <div class="col-2">
+            <div class="fit-content py-1 px-2 post-box">
+                <span class="material-icons-outlined fixIcon2">
+                    person
+                </span>
+            </div>
+        </div>
+        <div class="col-10 pl-4">
+            <h5 class="moreWhite reduceH5">
+                <span class="greenText">Hello! Mary</span> <br>
+                <small class="greyWhite">james@gmail.com</small>
+            </h5>
+        </div>
+        <div class="col-10 pl-4">
+            <h5 class="moreWhite reduceH5">
+                <small class="greyWhite">Account Type: Single Account</small>
+            </h5>
+        </div>
+        
+        <div class="mt-3 col-12 align-center">
+            <small class="xsmall greyWhite">Spot Balance</small><br>
+            <h5>$0.00</h5>
+        </div>
+    </div>
+    <div class="border-t">
+        <a href="/accounts/security-settings/" class="mainWhite">
+            <div class="a-p-inner px-3 py-1 mt-3 textColor">
+                <i class="material-icons-outlined fixIcon3" style="font-size: 18px;">lock</i>&nbsp;&nbsp;
+                Security
+            </div>
+        </a>
+        <a href="/accounts/account-verification/" class="mainWhite">
+            <div class="a-p-inner px-3 py-1 mt-3 textColor">
+                <i class="material-icons-outlined fixIcon3" style="font-size: 18px;">fact_check</i>&nbsp;&nbsp;
+                Verification
+                
+                &nbsp;<span class="badge badge-danger">1</span>
+                
+            </div>
+        </a>
+        <a href="/wallet/assets" class="mainWhite">
+            <div class="a-p-inner px-3 py-1 mt-3 textColor">
+                <i class="material-icons-outlined fixIcon3" style="font-size: 18px;">account_balance_wallet</i>&nbsp;&nbsp;
+                Wallet
+            </div>
+        </a>
+        
+        <a href="/accounts/logout/" class="textColor">
+            <div class="a-p-inner p-3 mt-3 border-t">
+               <input type="hidden" name="csrfmiddlewaretoken" value="XsTF8afd6XU4ghkBRSdeem5i1ae9wgscEB5reO8mvxeVEYvAzK1NAem0pcVAQUic">
+               <i class="material-icons-outlined fixIcon3" style="font-size: 18px;">logout</i>&nbsp;&nbsp;
+                Sign out
+            </div>
+        </a>
+    </div>
+</div>
+
+<script>
+    // account management modal
+    const accountMangt = (e)=>{
+        $('.account-control-panel-overlay').show()
+        $('.account-control-panel').show('slide', {direction:'up'}, 200)
+        // $(e).attr('onclick', 'closeAccountMangt(this)')
+    }
+    const closeAccountMangt = (e)=>{
+        $('.account-control-panel-overlay').hide()
+        $('.account-control-panel').hide('slide', {direction:'up'}, 200)
+        $(e).attr('onclick', 'accountMangt(this)')
+        $('.accountMangtBtn').each(function(){
+            $(this).attr('onclick', 'accountMangt(this)')
+        })
+    }
+</script>
+    <div class="modal fade" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="notificationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div style="background-color: #0ac989;" class="modal-header">
+                    <h5 class="modal-title" id="notificationModalLabel">Notifications</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div style="background-color: black;" class="modal-body" id="notificationModalBody">
+                    
+                </div>
+                <div style="background-color: black;" class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Google Translate Element -->
+            <div class="translate-container">
+              <div id="google_translate_element"></div>
+            </div>
+            
+            <!-- Google Translate Script -->
+            <script type="text/javascript">
+              function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                  { pageLanguage: 'en' }, 
+                  'google_translate_element'
+                );
+              }
+            </script>
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            
+            <!-- Styling -->
+            <style>
+              .translate-container {
+                position: fixed;
+                bottom: 20px;
+                left: 20px;
+                background-color: #32874d;
+                padding: 6px 6px;
+                border-radius: 6px;
+                border: 1px solid #ccc;
+                z-index: 1000;
+                font-family: Arial, sans-serif;
+                box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+              }
+            
+              #google_translate_element {
+                display: inline-block;
+                line-height: 1.2;
+              }
+            
+              /* Style the default dropdown */
+              .goog-te-combo {
+                padding: 5px 8px;
+                font-size: 13px;
+                border-radius: 4px;
+                border: 1px solid #bbb;
+                background-color: #32874d;
+                color: #fff;
+                cursor: pointer;
+              }
+            
+              /* Optional: Hide Google branding (may violate their TOS) */
+              .goog-logo-link,
+              .goog-te-gadget span {
+                display: none !important;
+              }
+            
+              .goog-te-gadget {
+                color: transparent !important;
+                white-space: nowrap;
+              }
+            </style>
+
+    <div class="modal fade" id="aboutLoan" tabindex="-1" aria-labelledby="aboutLoan" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content mx-4" style="background: none;">
+                <div class="modal-body py-4 modal-bg">
+                    <h5 class="site-yellow">Trustexfussion Trading Loans</h5>
+                    <p class="greyWhite xsmall">
+                        Get a 50% loan capital for your investment. The other 50% will be charged from your spot wallet.
+                    </p>
+                    <p class="greyWhite xsmall">
+                        This project was designed to aid users who can provide up to 50% of the amount required for a trading package. Trustexfussion will borrow users a 50% principal to enter the trading market.
+                    </p>
+                    <p class="greyWhite xsmall">
+                        Trade still operates in its full capacity while on loan. The loan fee will be estimated and charged on redemption of the investment.
+                    </p>
+                    <p class="greyWhite xsmall">
+                        To use this feature just click on the <b>Apply loan</b> button to activate it. To disable it, just click the button again.
+                    </p>
+                    <div class="mt-4">
+                        <button class="BtnDark" aria-colspan="xsmall" data-dismiss="modal">
+                            OK
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="/static/vendor/jquery/jquery.js"></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/docs/js/main.js"></script>
+    <script src="/static/assets/plugin/jquery/jquery-ui.min.js"></script>
+    
+    
+
+    <script>
+        $('#dAmount').on('change', function() {
+        this.value = parseFloat(this.value).toFixed(2);
+    });
+    </script>
+    <script>
+        $(document).on('click', 'a[href^="#"]', function (event) {
+                event.preventDefault();
+
+                $('html, body').animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top
+                }, 1000);
+            });
+    </script>
+    <!-- Smartsupp Live Chat script -->
+    <script type="text/javascript">
+        var _smartsupp = _smartsupp || {};
+        _smartsupp.key = '278ffd698b09b356eaee29727d3461c65d5f431c';
+        window.smartsupp||(function(d) {
+        var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+        s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+        c.type='text/javascript';c.charset='utf-8';c.async=true;
+        c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+        })(document);
+    </script>
+    <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+    <script>
+        const setTheme = (e)=>{
+            $('#theme').prop('href', `/static/docs/css/${e.id}.css`)
+
+            // icons
+            $('.theme-btn').each(function(){
+                $(this).addClass('blankBtn');
+                $(e).removeClass('blankBtn')
+            })
+
+            // update backend
+            $.ajax({
+                type: "POST",
+                url: "/accounts/changeTheme/" + e.id,
+                data: "",
+                dataType: "dataType",
+                success: function (response) {
+                    
+                }
+            });
+        }
+    </script>
+</body>
+</html>
