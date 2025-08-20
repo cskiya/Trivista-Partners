@@ -14,7 +14,8 @@ const server = http.createServer(async (req, res) => {
     } else {
         filePath = path.join(__dirname, urlPath);
         if (!path.extname(filePath)) {
-            filePath += '.html';
+            // Try serving index.html for directories
+            filePath = path.join(filePath, 'index.html');
         }
     }
 
@@ -36,10 +37,10 @@ const server = http.createServer(async (req, res) => {
     } catch (err) {
         if (err.code === 'ENOENT') {
             res.writeHead(404, { 'Content-Type': 'text/html' });
-            res.end('<h1>404 Not Found</h1>');
+            res.end('<h1>404 Not Found</h1><p>Check if the file exists or verify the URL.</p>');
         } else {
             res.writeHead(500, { 'Content-Type': 'text/html' });
-            res.end('<h1>500 Server Error</h1>');
+            res.end('<h1>500 Server Error</h1><p>Something went wrong on the server.</p>');
         }
     }
 });
