@@ -1,0 +1,401 @@
+<!-- Account Control Panel -->
+<div class="account-control-panel-overlay" style="display: none;" onclick="closeAccountMangt()"></div>
+<div class="account-control-panel post-box" style="padding: 0px; display: none; box-shadow: none; font-family: 'source sans pro';">
+    <div class="row pb-2 p-3">
+        <div class="col-2">
+            <div class="fit-content py-1 px-2 post-box">
+                <span class="material-icons-outlined fixIcon2">
+                    person
+                </span>
+            </div>
+        </div>
+        <div class="col-10 pl-4">
+            <h5 class="moreWhite reduceH5">
+                <span class="greenText">Hello! Mary</span> <br>
+                <small class="greyWhite">james@gmail.com</small>
+            </h5>
+        </div>
+        <div class="col-10 pl-4">
+            <h5 class="moreWhite reduceH5">
+                <small class="greyWhite">Account Type: Single Account</small>
+            </h5>
+        </div>
+        <div class="mt-3 col-12 align-center">
+            <small class="xsmall greyWhite">Spot Balance</small><br>
+            <h5>$0.00</h5>
+        </div>
+    </div>
+    <div class="border-t">
+        <a href="../accounts/security-settings.html" class="mainWhite">
+            <div class="a-p-inner px-3 py-1 mt-3 textColor">
+                <i class="material-icons-outlined fixIcon3" style="font-size: 18px;">lock</i>&nbsp;&nbsp;
+                Security
+            </div>
+        </a>
+        <a href="../accounts/account-verification.html" class="mainWhite">
+            <div class="a-p-inner px-3 py-1 mt-3 textColor">
+                <i class="material-icons-outlined fixIcon3" style="font-size: 18px;">fact_check</i>&nbsp;&nbsp;
+                Verification
+            </div>
+        </a>
+        <a href="../wallet/assets.html" class="mainWhite">
+            <div class="a-p-inner px-3 py-1 mt-3 textColor">
+                <i class="material-icons-outlined fixIcon3" style="font-size: 18px;">account_balance_wallet</i>&nbsp;&nbsp;
+                Wallet
+            </div>
+        </a>
+        <a href="../index.html" class="textColor">
+            <div class="a-p-inner p-3 mt-3 border-t">
+                <i class="material-icons-outlined fixIcon3" style="font-size: 18px;">logout</i>&nbsp;&nbsp;
+                Sign out
+            </div>
+        </a>
+    </div>
+</div>
+
+<!-- Notification Modal -->
+<div class="modal fade" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="notificationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div style="background-color: #0ac989;" class="modal-header">
+                <h5 class="modal-title" id="notificationModalLabel">Notifications</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div style="background-color: black;" class="modal-body" id="notificationModalBody">
+                <p>No notifications available.</p>
+            </div>
+            <div style="background-color: black;" class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Google Translate Element -->
+<div class="translate-container">
+    <div id="google_translate_element"></div>
+</div>
+
+<!-- About Loan Modal -->
+<div class="modal fade" id="aboutLoan" tabindex="-1" aria-labelledby="aboutLoan" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content mx-4" style="background: none;">
+            <div class="modal-body py-4 modal-bg">
+                <h5 class="site-yellow">Trivista-Partners Trading Loans</h5>
+                <p class="greyWhite xsmall">
+                    Get a 50% loan capital for your investment. The other 50% will be charged from your spot wallet.
+                </p>
+                <p class="greyWhite xsmall">
+                    This project was designed to aid users who can provide up to 50% of the amount required for a trading package. Trivista-Partners will borrow users a 50% principal to enter the trading market.
+                </p>
+                <p class="greyWhite xsmall">
+                    Trade still operates in its full capacity while on loan. The loan fee will be estimated and charged on redemption of the investment.
+                </p>
+                <p class="greyWhite xsmall">
+                    To use this feature just click on the <b>Apply loan</b> button to activate it. To disable it, just click the button again.
+                </p>
+                <div class="mt-4">
+                    <button class="BtnDark" aria-colspan="xsmall" data-dismiss="modal">
+                        OK
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="../static/vendor/jquery/jquery.js"></script>
+<script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../static/docs/js/main.js"></script>
+<script src="../static/assets/plugin/jquery/jquery-ui.min.js"></script>
+<script>
+    $('#dAmount').on('change', function() {
+        this.value = parseFloat(this.value).toFixed(2);
+    });
+</script>
+<script>
+    $(document).on('click', 'a[href^="#"]', function(event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 1000);
+    });
+</script>
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = '278ffd698b09b356eaee29727d3461c65d5f431c';
+    window.smartsupp || (function(d) {
+        var s, c, o = smartsupp = function() { o._.push(arguments); };
+        o._ = [];
+        s = d.getElementsByTagName('script')[0];
+        c = d.createElement('script');
+        c.type = 'text/javascript';
+        c.charset = 'utf-8';
+        c.async = true;
+        c.src = 'https://www.smartsuppchat.com/loader.js?';
+        s.parentNode.insertBefore(c, s);
+    })(document);
+</script>
+<noscript> Powered by <a href="https://www.smartsupp.com" target="_blank">Smartsupp</a></noscript>
+<script>
+    const setTheme = (e) => {
+        $('#theme').prop('href', `../static/docs/css/${e.id}.css`);
+        $('.theme-btn').each(function() {
+            $(this).addClass('blankBtn');
+            $(e).removeClass('blankBtn');
+        });
+        alert('Theme changed to ' + e.id);
+    }
+    const accountMangt = (e) => {
+        $('.account-control-panel-overlay').show();
+        $('.account-control-panel').show('slide', { direction: 'up' }, 200);
+    }
+    const closeAccountMangt = () => {
+        $('.account-control-panel-overlay').hide();
+        $('.account-control-panel').hide('slide', { direction: 'up' }, 200);
+    }
+</script>
+<script>
+    $(document).ready(function() {
+        const $slides = $('.promo-slide');
+        const $dots = $('.dot');
+        let currentIndex = 0;
+        let touchStartX = 0;
+        let touchEndX = 0;
+        function showSlide(index) {
+            $slides.removeClass('active');
+            $dots.removeClass('active');
+            $slides.eq(index).addClass('active');
+            $dots.eq(index).addClass('active');
+        }
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % $slides.length;
+            showSlide(currentIndex);
+        }
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + $slides.length) % $slides.length;
+            showSlide(currentIndex);
+        }
+        $dots.on('click', function() {
+            currentIndex = $(this).data('index');
+            showSlide(currentIndex);
+        });
+        $('.promo-slider').on('touchstart', function(e) {
+            touchStartX = e.touches[0].clientX;
+        });
+        $('.promo-slider').on('touchend', function(e) {
+            touchEndX = e.changedTouches[0].clientX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+        });
+        setInterval(nextSlide, 4000);
+    });
+</script>
+<script>
+    function openPromoModal() {
+        document.getElementById('promoModal').style.display = 'block';
+    }
+    function closeModal() {
+        document.getElementById('promoModal').style.display = 'none';
+    }
+</script>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+    var coinListApiSettings = {
+        'async': true,
+        'crossDomain': true,
+        'url': 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cbinancecoin%2Cdogecoin%2Ccardano%2Csolana&vs_currencies=usd',
+        'method': 'GET',
+        'headers': {}
+    }
+    const getCoinPrice = () => {
+        $.ajax(coinListApiSettings).done(function(res) {
+            $('.btcPrice').each(function() {
+                $(this).html((res.bitcoin.usd).toLocaleString());
+            });
+            $('.ethPrice').each(function() {
+                $(this).html((res.ethereum.usd).toLocaleString());
+            });
+            $('.bnbPrice').each(function() {
+                $(this).html((res.binancecoin.usd).toLocaleString());
+            });
+            $('.adaPrice').each(function() {
+                $(this).html((res.cardano.usd).toLocaleString());
+            });
+            $('.solPrice').each(function() {
+                $(this).html((res.solana.usd).toLocaleString());
+            });
+            $('.dogePrice').each(function() {
+                $(this).html((res.dogecoin.usd).toLocaleString());
+            });
+        });
+    }
+    setTimeout(getCoinPrice, 2000);
+</script>
+<style>
+    .promo-section {
+        width: 100%;
+        padding: 1rem;
+        background: #1a1d25;
+        overflow: hidden;
+    }
+    .promo-slider {
+        position: relative;
+        width: 100%;
+    }
+    .promo-slide {
+        display: none;
+        width: 100%;
+        padding: 1rem;
+    }
+    .promo-slide.active {
+        display: block;
+    }
+    .promo-card {
+        background: linear-gradient(135deg, #6366f1, #4f46e5);
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        height: auto;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    .promo-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: white;
+        margin-bottom: 0.75rem;
+        line-height: 1.2;
+    }
+    .promo-description {
+        font-size: 0.875rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 1rem;
+        line-height: 1.5;
+    }
+    .promo-price-range {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 0.5rem;
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: white;
+    }
+    .price-label {
+        display: block;
+        margin-bottom: 0.25rem;
+        font-size: 0.875rem;
+    }
+    .price-value {
+        font-size: 1.125rem;
+        font-weight: 600;
+    }
+    .btn-create {
+        width: 100%;
+        background: white;
+        color: #4f46e5;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.75rem;
+        font-weight: 600;
+        font-size: 0.875rem;
+    }
+    .slider-dots {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+    }
+    .dot.active {
+        background: white;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .modal-content {
+        background: linear-gradient(to right, #6a11cb, #2575fc);
+        margin: 10% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 90%;
+        max-width: 500px;
+        border-radius: 10px;
+        color: white;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        animation: fadeIn 0.3s ease;
+    }
+    .close {
+        float: right;
+        cursor: pointer;
+        font-size: 24px;
+    }
+    .close:hover {
+        color: #000;
+    }
+    .promo-price-range {
+        font-size: 1.2rem;
+        margin: 15px 0;
+        text-align: center;
+    }
+    .translate-container {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background-color: #32874d;
+        padding: 6px 6px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        z-index: 1000;
+        font-family: Arial, sans-serif;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+    }
+    #google_translate_element {
+        display: inline-block;
+        line-height: 1.2;
+    }
+    .goog-te-combo {
+        padding: 5px 8px;
+        font-size: 13px;
+        border-radius: 4px;
+        border: 1px solid #bbb;
+        background-color: #32874d;
+        color: #fff;
+        cursor: pointer;
+    }
+    .goog-logo-link,
+    .goog-te-gadget span {
+        display: none !important;
+    }
+    .goog-te-gadget {
+        color: transparent !important;
+        white-space: nowrap;
+    }
+</style>

@@ -1,0 +1,62 @@
+<!-- Desktop Navbar -->
+<div class="d-none d-lg-block">
+    <nav class="navbar navbar-expand-lg px-4 fixed-top border-b dark-bg" style="z-index:99 !important; font-family: 'roboto';">
+        <div style="margin-left: 300px;">
+            <h5 class="textColor">
+                <i class="fa fa-caret-right site-green"></i>
+                DASHBOARD
+            </h5>
+        </div>
+        <div style="margin-left: 300px;">
+            <h5 class="textColor">
+                <i class="site-green"></i>
+                Account Type: Single Account
+            </h5>
+        </div>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item mr-2 mt-2">
+                <i class="material-icons-outlined fixIcon4 post-box p-1 blue-bg" style="font-size: 24px; border-radius: 50%; color: #fff;">
+                    person
+                </i>
+                <span>
+                    james@gmail.com
+                </span>
+            </li>
+            <li class="nav-item mr-2 ml-2 border-l pl-3" onclick="accountMangt(this)">
+                <a href="#" class="nav-link px-3">
+                    <button class="Btn py-2 px-4">
+                        Manage Account &nbsp;
+                    </button>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Mobile Navbar -->
+<div class="d-block d-lg-none container-fluid sticky-top mobileNavBg" style="z-index: 3;">
+    <div class="row py-2">
+        <div class="col-6">
+            <a class="navbar-brand" href="../index.html">
+                <span>
+                    <img src="../static/assets/images/tp-logo.png" alt="fgh-logo" style="width:28px; height: 28px">
+                </span>
+            </a>
+            <small class="textColor2">
+                <i class="fa fa-caret-right"></i>
+                <b>DASHBOARD</b>
+            </small>
+        </div>
+        <div class="col-6 align-right">
+            <span class="p-2 fixIcon" onclick="accountMangt(this)">
+                <i class="material-icons-outlined fixIcon2" style="font-size: 28px; color: #fff;">
+                    person
+                </i>
+                <i class="fa fa-circle redText" style="font-size: 8px;"></i>
+            </span>
+            <span class="p-2 fixIcon" onclick="openSideBarSm()" id="toggleDrawer">
+                <i class="fi fi-rr-apps textColor2" style="font-size: 22px;"></i>
+            </span>
+        </div>
+    </div>
+</div>

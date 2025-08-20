@@ -5,38 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trustexfussion | My Golds </title>
-    <link rel="stylesheet" href="/static/assets/flaticon/css/uicons-regular-rounded.css">
-    <link rel="stylesheet" href="/static/docs/css/light.css" id="theme">
-    <link rel="stylesheet" href="/static/docs/css/main.css">
-    <link rel="shortcut icon" type="image/jpg" href="/static/assets/images/fgh-logo.png" />
-    <link rel="stylesheet" href="/static/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/assets/fonts/fontawesome.css">
+    <title>Trivista-Partners | Dashboard</title>
+    <!-- Updated to relative paths for static assets -->
+    <link rel="stylesheet" href="static/assets/flaticon/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="static/docs/css/dark.css" id="theme">
+    <link rel="stylesheet" href="static/docs/css/main.css">
+    <link rel="shortcut icon" type="image/jpg" href="static/assets/images/favicon.png" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="static/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/assets/fonts/fontawesome.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lobster|Heebo|Roboto|Rajdhani|Open Sans|Lato|Source Sans Pro">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <!-- Tel -->
-    <link rel="stylesheet" href="/static/assets/plugin/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="static/assets/plugin/jquery/jquery-ui.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.16/css/intlTelInput.css"/>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.16/js/intlTelInput.min.js"></script>
-   <!-- End Tel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.16/js/intlTelInput.min.js"></script>
+    <!-- End Tel -->
     <style>
-        p{
+        p {
             font-size: 16px;
         }
     </style>
 </head>
 
-
 <body>
-    <!-- testing -->
-
-<!-- End TESTING -->
-
-<!-- messages -->
-
-<!-- end messages -->
     <div class="site-container">
-         <!-- ## -->
+        <!-- Desktop Navbar -->
         <div class="d-none d-lg-block">
             <nav class="navbar navbar-expand-lg px-4 fixed-top border-b dark-bg" style="z-index:99 !important; font-family: 'roboto';">
                 <div style="margin-left: 300px;">
@@ -45,14 +39,12 @@
                         My Golds
                     </h5>
                 </div>
-
                 <div style="margin-left: 300px;">
                     <h5 class="textColor">
                         <i class="site-green"></i>
                         Account Type: Single Account
                     </h5>
                 </div>
-               
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mr-2 mt-2">
                         <i class="material-icons-outlined fixIcon4 post-box p-1 blue-bg" style="font-size: 24px; border-radius: 50%; color: #fff;">
@@ -73,296 +65,78 @@
             </nav>
         </div>
 
-        <!-- mobile nav bar -->
+        <!-- Mobile Navbar -->
         <div class="d-block d-lg-none container-fluid sticky-top mobileNavBg" style="z-index: 3;">
             <div class="row py-2">
                 <div class="col-6">
-                    <a class="navbar-brand" href="/">
+                    <a class="navbar-brand" href="index.html">
                         <span>
-                            <img src="/static/assets/images/fgh-logo.png" alt="fgh-logo"
-                                style="width:28px; height: 28px">
+                            <img src="static/assets/images/tp-logo.png" alt="fgh-logo" style="width:28px; height: 28px">
                         </span>
                     </a>
                     <small class="textColor2">
                         <i class="fa fa-caret-right"></i>
-                        <b>My Golds</b>
-                    </small>                  
+                        <b>DASHBOARD</b>
+                    </small>
                 </div>
                 <div class="col-6 align-right">
                     <span class="p-2 fixIcon" onclick="accountMangt(this)">
                         <i class="material-icons-outlined fixIcon2" style="font-size: 28px; color: #fff;">
                             person
                         </i>
-                        
-                          <i class="fa fa-circle redText" style="font-size: 8px;"></i>
-                        
+                        <i class="fa fa-circle redText" style="font-size: 8px;"></i>
                     </span>
-                    
                     <span class="p-2 fixIcon" onclick="openSideBarSm()" id="toggleDrawer">
                         <i class="fi fi-rr-apps textColor2" style="font-size: 22px;"></i>
                     </span>
                 </div>
             </div>
         </div>
-        <!-- End top nav mobile -->
 
-        <!-- sidebar Mobile -->
+        <!-- Sidebar Mobile -->
         <div class="d-block d-sm-none">
-    <div class="overlayDiv" id="overlayDiv" onclick="hideSideBarSm()" style="z-index: 9;"></div>
-
-    <div class="side-bar-mobile" id="sideBarSm" style="display: none; padding-bottom: 10px;">
-        <div class="side-bar-mobile-inner" style="height: 100%; overflow-y: scroll; padding-bottom: 40px;">
-            <div class="mt-2 border-b py-2">
-                <h4 class="reduceH5 text-center" style="font-family:'Ubuntu';">
-                    <span class="greyWhite2"><b>Trustexfussion</b></span>
-                </h4>
-            </div>
-            <!-- ******* -->
-    
-            <div class="container-fluid pr-0 pl-3 mt-3">
-                <div class="mb-2 pl-3">
-                    <small class="greyWhite2">Management/Wallets</small>
-                </div>
-                <a href="/dashboard/" class="textColor xsmall my-2">
-                    <div class="side-link  px-3">
-                        <i class="material-icons-round fixIcon" style="font-size: 16px;">dashboard</i> &nbsp;
-                        Dashboard
+            <div class="overlayDiv" id="overlayDiv" onclick="hideSideBarSm()" style="z-index: 9;"></div>
+            <div class="side-bar-mobile" id="sideBarSm" style="display: none; padding-bottom: 10px;">
+                <div class="side-bar-mobile-inner" style="height: 100%; overflow-y: scroll; padding-bottom: 40px;">
+                    <div class="mt-2 border-b py-2">
+                        <h4 class="reduceH5 text-center" style="font-family:'Ubuntu';">
+                            <span class="greyWhite2"><b>Trivista-Partners</b></span>
+                        </h4>
                     </div>
-                </a>
-
-                <a href="/dashboard/" class="textColor xsmall" data-toggle="collapse" data-target="#walletOptions">
-                    <div class="side-link px-3 mt-4">
-                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">account_balance_wallet</i> &nbsp;
-                        Wallet
-                        <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
-                    </div>
-                </a>
-                <!-- wallets -->
-                <div class="collapse" id="walletOptions">
-                    <div class="container">
-                        <div class="mt-3 ml-4">
-                            <a href="/wallet/assets" class="greyWhite2 xsmall">
-                                Balances
-                            </a>
+                    <div class="container-fluid pr-0 pl-3 mt-3">
+                        <div class="mb-2 pl-3">
+                            <small class="greyWhite2">Management/Wallets</small>
                         </div>
-                        <div class="mt-3 ml-4">
-                            <a href="/wallet/deposit" class="greyWhite2 xsmall">
-                                Deposit
-                            </a>
-                        </div>
-                        <div class="mt-3 ml-4">
-                            <a href="/wallet/withdrawal" class="greyWhite2 xsmall">
-                                Withdraw
-                            </a>
-                        </div>
-                        <div class="mt-3 ml-4">
-                            <a href="/wallet/transfer" class="greyWhite2 xsmall">
-                                Transfer Asset
-                            </a>
-                        </div>
-                    </div>
-                </div> 
-                <!-- Wallets end -->
-    
-                <a href="/dashboard/" class="textColor xsmall" data-toggle="collapse" data-target="#txnOptions">
-                    <div class="side-link px-3 mt-4">
-                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">receipt_long</i> &nbsp;
-                        Transactions
-                        <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
-                    </div>
-                </a>
-                <div class="collapse" id="txnOptions">
-                    <div class="container">
-                        <div class="mt-3 ml-4">
-                            <a href="/wallet/transactions" class="greyWhite2 xsmall">
-                                Pending Orders
-                            </a>
-                        </div>
-                        <div class="mt-3 ml-4">
-                            <a href="/wallet/transaction-history" class="greyWhite2 xsmall">
-                                Transaction History
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <a href="/dashboard/" class="textColor xsmall" data-toggle="collapse" data-target="#profileOptions">
-                    <div class="side-link px-3 mt-4">
-                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">settings</i> &nbsp;
-                        Settings
-                        <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
-                    </div>
-                </a>
-                <!-- Profile -->
-                <div class="collapse" id="profileOptions">
-                    <div class="container">
-                        <div class="mt-3 ml-4">
-                            <a href="/accounts/account-verification/" class="greyWhite2 xsmall">
-                                Verification
-                            </a>
-                        </div>
-                        <div class="mt-3 ml-4">
-                            <a href="/accounts/payment-settings/" class="greyWhite2 xsmall">
-                                Withdrawal Address
-                            </a>
-                        </div>
-                        <div class="mt-3 ml-4">
-                            <a href="/wallet/membership-application" class="greyWhite2 xsmall">
-                                Membership Card
-                            </a>
-                        </div>
-                        <div class="mt-3 ml-4">
-                            <a href="/wallet/withdrawal-card" class="greyWhite2 xsmall">
-                                Exclusive Withdrawal Card
-                            </a>
-                        </div>
-                        <div class="mt-3 ml-4">
-                            <a href="/accounts/security-settings/" class="greyWhite2 xsmall">
-                                Security Settings
-                            </a>
-                        </div>
-                        <div class="mt-3 ml-4">
-                            <a href="/accounts/update-profile" class="greyWhite2 xsmall">
-                                Profile
-                            </a>
-                        </div>
-                        <div class="mt-3 ml-4">
-                            <a href="/accounts/register-agents/" class="greyWhite2 xsmall">
-                                Become an Agent
-                            </a>
-                        </div>
-
-                    </div>
-                </div> 
-                <!-- Profile Ends -->
-    
-                <div class="mb-3 mt-4 pl-3">
-                    <small class="greyWhite2">Finance/Earn</small>
-                </div>
-                <a href="/invest/" class="textColor xsmall">
-                    <div class="side-link px-3 mt-4">
-                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">scatter_plot</i> &nbsp;
-                        Invest
-                    </div>
-                </a>
-                <a href="/dashboard/investments" class="textColor xsmall">
-                    <div class="side-link px-3 mt-4">
-                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">leaderboard</i> &nbsp;
-                        My Investments
-                    </div>
-                </a>
-                <a href="/dashboard/investments-gold/" class="textColor xsmall">
-                    <div class="side-link px-3 mt-4">
-                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">leaderboard</i> &nbsp;
-                        My Golds
-                    </div>
-                </a>
-                <a href="/wallet/apply-for-loan/" class="textColor xsmall">
-                    <div class="side-link px-3 mt-4">
-                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
-                        Loan Application
-                    </div>
-                </a>
-                <a href="/wallet/connect-wallet" class="textColor xsmall">
-                    <div class="side-link px-3 mt-4">
-                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
-                        Import Wallet
-                    </div>
-                </a>
-                <div class="mt-4 mb-2 pl-3">
-                    <small class="greyWhite2">Set Theme</small>
-                </div>
-                <div class="tabs-wrapper p-1 ml-2 mt-2" style="border-radius: 5px; width: fit-content;">
-                    
-                        <button class="Btn theme-btn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="light">
-                            <i class="fa fa-sun-o"></i>
-                        </button>
-                        <button class="Btn blankBtn theme-btn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="dark">
-                            <i class="fa fa-moon-o"></i>
-                        </button>
-                    
-
-                </div>
-            </div>
-            <div class="border-t mt-4 pt-3 pl-4">
-                <a href="/accounts/referral" class="textColor xsmall">
-                    <div class="side-link px-3 mt-2">
-                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
-                        Referral
-                    </div>
-                </a>
-                <a href="/accounts/logout/" class="textColor xsmall">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="3LnPRkgc2GXvLnhKuLq2MdV2X9wor7VCKUzBXY9lrghm94sJcDeB85cKlbdPLLLC">
-                    <div class="side-link px-3 mt-4">
-                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">logout</i> &nbsp;
-                        Sign out
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-</div>
-        <!-- End sidebar mobile -->
-
-
-        <div class="container-fluid" style="height: 100%;">
-            <div class="row" style="height:100%;">
-                <!-- SideBar dkp -->
-                <div class="col-md-2 sideBar sticky-top d-none d-lg-block style-scrollbar pb-4 border-r" style="padding:0px">
-                    <div class="pl-4">
-                        <a class="navbar-brand" href="/">
-                            <h5 class="textColor2 reduceH5 fixIcon2" style="font-family:'rajdhani'">
-                                <span><img src="/static/assets/images/fgh-logo.png" alt="" class="logoStyle" style="width:27px; height: 27px"></span>
-                                <b class="ml-2 fixIcon">Trustexfussion</b>
-                            </h5>
-                        </a><br>
-                    </div>
-                    <div style="font-family: 'roboto';" class="pl-2">
-                        <div class="mt-4 mb-2 pl-4">
-                            <small class="greyWhite3">Management</small>
-                        </div>
-                        <a href="/dashboard/" class="textColor2 xsmall my-2">
-                            <div class="side-link  px-3">
+                        <a href="dashboard.html" class="textColor xsmall my-2">
+                            <div class="side-link side_bar_link px-3">
                                 <i class="material-icons-round fixIcon" style="font-size: 16px;">dashboard</i> &nbsp;
                                 Dashboard
                             </div>
                         </a>
-                        
-                        <a href="/dashboard/" class="textColor2 xsmall" data-toggle="collapse" data-target="#walletOptions">
+                        <a href="#" class="textColor xsmall" data-toggle="collapse" data-target="#walletOptions">
                             <div class="side-link px-3 mt-4">
                                 <i class="material-icons-round fixIcon2" style="font-size: 18px;">account_balance_wallet</i> &nbsp;
                                 Wallet
                                 <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
                             </div>
                         </a>
-                        <!-- wallets -->
                         <div class="collapse" id="walletOptions">
                             <div class="container">
                                 <div class="mt-3 ml-4">
-                                    <a href="/wallet/assets" class="greyWhite xsmall">
-                                        Balances
-                                    </a>
+                                    <a href="../wallet/assets.html" class="greyWhite2 xsmall">Balances</a>
                                 </div>
                                 <div class="mt-3 ml-4">
-                                    <a href="/wallet/deposit" class="greyWhite xsmall">
-                                        Deposit
-                                    </a>
+                                    <a href="../wallet/deposit.html" class="greyWhite2 xsmall">Deposit</a>
                                 </div>
                                 <div class="mt-3 ml-4">
-                                    <a href="/wallet/withdrawal" class="greyWhite xsmall">
-                                        Withdraw
-                                    </a>
+                                    <a href="../wallet/withdrawal.html" class="greyWhite2 xsmall">Withdraw</a>
                                 </div>
                                 <div class="mt-3 ml-4">
-                                    <a href="/wallet/transfer" class="greyWhite xsmall">
-                                        Transfer Asset
-                                    </a>
+                                    <a href="../wallet/transfer.html" class="greyWhite2 xsmall">Transfer Asset</a>
                                 </div>
                             </div>
-                        </div> 
-                        <!-- Wallets end -->
-                        
-                        <a href="/dashboard/" class="textColor2 xsmall" data-toggle="collapse" data-target="#txnOptions">
+                        </div>
+                        <a href="#" class="textColor xsmall" data-toggle="collapse" data-target="#txnOptions">
                             <div class="side-link px-3 mt-4">
                                 <i class="material-icons-round fixIcon2" style="font-size: 18px;">receipt_long</i> &nbsp;
                                 Transactions
@@ -372,85 +146,222 @@
                         <div class="collapse" id="txnOptions">
                             <div class="container">
                                 <div class="mt-3 ml-4">
-                                    <a href="/wallet/transactions" class="greyWhite xsmall">
-                                        Pending Orders
-                                    </a>
+                                    <a href="../wallet/transactions.html" class="greyWhite2 xsmall">Pending Orders</a>
                                 </div>
                                 <div class="mt-3 ml-4">
-                                    <a href="/wallet/transaction-history" class="greyWhite xsmall">
-                                        Transaction History
-                                    </a>
+                                    <a href="../wallet/transaction-history.html" class="greyWhite2 xsmall">Transaction History</a>
                                 </div>
                             </div>
                         </div>
-                        <a href="/dashboard/" class="textColor2 xsmall" data-toggle="collapse" data-target="#profileOptions">
+                        <a href="#" class="textColor xsmall" data-toggle="collapse" data-target="#profileOptions">
                             <div class="side-link px-3 mt-4">
                                 <i class="material-icons-round fixIcon2" style="font-size: 18px;">settings</i> &nbsp;
                                 Settings
                                 <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
                             </div>
                         </a>
-                        <!-- Profile -->
                         <div class="collapse" id="profileOptions">
                             <div class="container">
                                 <div class="mt-3 ml-4">
-                                    <a href="/accounts/account-verification/" class="greyWhite xsmall">
-                                        Verification
-                                    </a>
+                                    <a href="../accounts/account-verification.html" class="greyWhite2 xsmall">Verification</a>
                                 </div>
                                 <div class="mt-3 ml-4">
-                                    <a href="/accounts/payment-settings/" class="greyWhite xsmall">
-                                        Withdrawal Address
-                                    </a>
+                                    <a href="../accounts/payment-settings.html" class="greyWhite2 xsmall">Withdrawal Address</a>
                                 </div>
                                 <div class="mt-3 ml-4">
-                                    <a href="/wallet/membership-application" class="greyWhite xsmall">
-                                        Membership Card
-                                    </a>
+                                    <a href="../wallet/become-member.html" class="greyWhite2 xsmall">Membership Card</a>
                                 </div>
                                 <div class="mt-3 ml-4">
-                                    <a href="/wallet/withdrawal-card" class="greyWhite xsmall">
-                                        Exclusive Withdrawal Card
-                                    </a>
+                                    <a href="../wallet/withdrawal-card.html" class="greyWhite2 xsmall">Exclusive Withdrawal Card</a>
                                 </div>
                                 <div class="mt-3 ml-4">
-                                    <a href="/accounts/security-settings/" class="greyWhite xsmall">
-                                        Security Settings
-                                    </a>
+                                    <a href="../accounts/security-settings.html" class="greyWhite2 xsmall">Security Settings</a>
                                 </div>
                                 <div class="mt-3 ml-4">
-                                    <a href="/accounts/update-profile" class="greyWhite xsmall">
-                                        Profile
-                                    </a>
+                                    <a href="../accounts/update-profile.html" class="greyWhite2 xsmall">Profile</a>
                                 </div>
                                 <div class="mt-3 ml-4">
-                                    <a href="/accounts/register-agents/" class="greyWhite xsmall">
-                                        Register as Agent
-                                    </a>
+                                    <a href="../accounts/register-agents.html" class="greyWhite2 xsmall">Become an Agent</a>
                                 </div>
                             </div>
-                        </div> 
-                        <!-- Profile Ends -->
-                        <a href="/accounts/referral" class="textColor2 xsmall">
+                        </div>
+                        <div class="mb-3 mt-4 pl-3">
+                            <small class="greyWhite2">Finance/Earn</small>
+                        </div>
+                        <a href="../invest/index.html" class="textColor xsmall">
                             <div class="side-link px-3 mt-4">
-                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
-                                Referral
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">scatter_plot</i> &nbsp;
+                                Invest
                             </div>
                         </a>
-
-                        <a href="/accounts/scam-reports/" class="textColor2 xsmall">
+                        <a href="/dashboard/investments.html" class="textColor xsmall">
                             <div class="side-link px-3 mt-4">
-                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
-                                File Recovery Report
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">leaderboard</i> &nbsp;
+                                My Investments
                             </div>
                         </a>
-                        <a href="/wallet/connect-wallet" class="textColor2 xsmall">
+                        <a href="/dashboard/investments-gold.html" class="textColor xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">leaderboard</i> &nbsp;
+                                My Golds
+                            </div>
+                        </a>
+                        <a href="../wallet/apply-for-loan.html" class="textColor xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                                Loan Application
+                            </div>
+                        </a>
+                        <a href="../wallet/connect-wallet.html" class="textColor xsmall">
                             <div class="side-link px-3 mt-4">
                                 <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
                                 Import Wallet
                             </div>
                         </a>
-                        <a href="/wallet/apply-for-loan/" class="textColor2 xsmall">
+                        <div class="mt-4 mb-2 pl-3">
+                            <small class="greyWhite2">Set Theme</small>
+                        </div>
+                        <div class="tabs-wrapper p-1 ml-2 mt-2" style="border-radius: 5px; width: fit-content;">
+                            <button class="Btn theme-btn blankBtn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="light">
+                                <i class="fa fa-sun-o"></i>
+                            </button>
+                            <button class="Btn theme-btn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="dark">
+                                <i class="fa fa-moon-o"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="border-t mt-4 pt-3 pl-4">
+                        <a href="../accounts/referral.html" class="textColor xsmall">
+                            <div class="side-link px-3 mt-2">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                                Referral
+                            </div>
+                        </a>
+                        <a href="index.html" class="textColor xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">logout</i> &nbsp;
+                                Sign out
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container-fluid" style="height: 100%;">
+            <div class="row" style="height:100%;">
+                <!-- Desktop Sidebar -->
+                <div class="col-md-2 sideBar sticky-top d-none d-lg-block style-scrollbar pb-4 border-r" style="padding:0px">
+                    <div class="pl-4">
+                        <a class="navbar-brand" href="index.html">
+                            <h5 class="textColor2 reduceH5 fixIcon2" style="font-family:'rajdhani'">
+                                <span><img src="static/assets/images/tp-logo.png" alt="" class="logoStyle" style="width:27px; height: 27px"></span>
+                                <b class="ml-2 fixIcon" style="color:#d2a532;">Trivista-Partners</b>
+                            </h5>
+                        </a><br>
+                    </div>
+                    <div style="font-family: 'roboto';" class="pl-2">
+                        <div class="mt-4 mb-2 pl-4">
+                            <small class="greyWhite3">Management</small>
+                        </div>
+                        <a href="dashboard.html" class="textColor2 xsmall my-2">
+                            <div class="side-link side_bar_link px-3">
+                                <i class="material-icons-round fixIcon" style="font-size: 16px;">dashboard</i> &nbsp;
+                                Dashboard
+                            </div>
+                        </a>
+                        <a href="#" class="textColor2 xsmall" data-toggle="collapse" data-target="#walletOptions">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">account_balance_wallet</i> &nbsp;
+                                Wallet
+                                <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="walletOptions">
+                            <div class="container">
+                                <div class="mt-3 ml-4">
+                                    <a href="../wallet/assets.html" class="greyWhite xsmall">Balances</a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="../wallet/deposit.html" class="greyWhite xsmall">Deposit</a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="../wallet/withdrawal.html" class="greyWhite xsmall">Withdraw</a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="../wallet/transfer.html" class="greyWhite xsmall">Transfer Asset</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="textColor2 xsmall" data-toggle="collapse" data-target="#txnOptions">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">receipt_long</i> &nbsp;
+                                Transactions
+                                <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="txnOptions">
+                            <div class="container">
+                                <div class="mt-3 ml-4">
+                                    <a href="../wallet/transactions.html" class="greyWhite xsmall">Pending Orders</a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="../wallet/transaction-history.html" class="greyWhite xsmall">Transaction History</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="textColor2 xsmall" data-toggle="collapse" data-target="#profileOptions">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">settings</i> &nbsp;
+                                Settings
+                                <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="profileOptions">
+                            <div class="container">
+                                <div class="mt-3 ml-4">
+                                    <a href="../accounts/account-verification.html" class="greyWhite xsmall">Verification</a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="../accounts/payment-settings.html" class="greyWhite xsmall">Withdrawal Address</a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="../wallet/become-member.html" class="greyWhite xsmall">Membership Card</a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="../wallet/withdrawal-card.html" class="greyWhite xsmall">Exclusive Withdrawal Card</a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="../accounts/security-settings.html" class="greyWhite xsmall">Security Settings</a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="../accounts/update-profile.html" class="greyWhite xsmall">Profile</a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="../accounts/register-agents.html" class="greyWhite xsmall">Register as Agent</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="../accounts/referral.html" class="textColor2 xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                                Referral
+                            </div>
+                        </a>
+                        <a href="../accounts/scam-reports.html" class="textColor2 xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                                File Recovery Report
+                            </div>
+                        </a>
+                        <a href="../wallet/connect-wallet.html" class="textColor2 xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                                Import Wallet
+                            </div>
+                        </a>
+                        <a href="../wallet/apply-for-loan.html" class="textColor2 xsmall">
                             <div class="side-link px-3 mt-4">
                                 <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
                                 Loans
@@ -461,19 +372,19 @@
                         <div class="pl-3">
                             <small class="greyWhite3">Earn/Finance</small>
                         </div>
-                        <a href="/invest/" class="textColor2 xsmall">
+                        <a href="../invest/index.html" class="textColor2 xsmall">
                             <div class="side-link px-3 mt-4">
                                 <i class="material-icons-round fixIcon2" style="font-size: 18px;">scatter_plot</i> &nbsp;
                                 Invest
                             </div>
                         </a>
-                        <a href="/dashboard/investments" class="textColor2 xsmall">
+                        <a href="/dashboard/investments.html" class="textColor2 xsmall">
                             <div class="side-link px-3 mt-4">
                                 <i class="material-icons-round fixIcon2" style="font-size: 18px;">leaderboard</i> &nbsp;
                                 My Investments
                             </div>
                         </a>
-                        <a href="/dashboard/investments-gold/" class="textColor2 xsmall">
+                        <a href="/dashboard/investments-gold.html" class="textColor2 xsmall">
                             <div class="side-link px-3 mt-4">
                                 <i class="material-icons-round fixIcon2" style="font-size: 18px;">leaderboard</i> &nbsp;
                                 My Golds
@@ -484,14 +395,12 @@
                         <small class="greyWhite3">Set Theme</small>
                     </div>
                     <div class="tabs-wrapper p-1 ml-4 mt-3" style="border-radius: 5px; width: fit-content;">
-                        
-                            <button class="Btn theme-btn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="light">
-                                Light
-                            </button>
-                            <button class="Btn blankBtn theme-btn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="dark">
-                                Dark
-                            </button>
-                        
+                        <button class="Btn theme-btn blankBtn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="light">
+                            Light
+                        </button>
+                        <button class="Btn theme-btn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="dark">
+                            Dark
+                        </button>
                     </div>
                 </div>
                 
