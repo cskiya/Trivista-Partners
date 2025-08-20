@@ -5,38 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trustexfussion | DASHBOARD </title>
-    <link rel="stylesheet" href="/static/assets/flaticon/css/uicons-regular-rounded.css">
-    <link rel="stylesheet" href="/static/docs/css/dark.css" id="theme">
-    <link rel="stylesheet" href="/static/docs/css/main.css">
-    <link rel="shortcut icon" type="image/jpg" href="/static/assets/images/fgh-logo.png" />
-    <link rel="stylesheet" href="/static/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/assets/fonts/fontawesome.css">
+    <title>Trustexfussion | DASHBOARD</title>
+    <!-- Updated to relative paths for static assets -->
+    <link rel="stylesheet" href="static/assets/flaticon/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="static/docs/css/dark.css" id="theme">
+    <link rel="stylesheet" href="static/docs/css/main.css">
+    <link rel="shortcut icon" type="image/jpg" href="static/assets/images/fgh-logo.png" />
+    <link rel="stylesheet" href="static/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/assets/fonts/fontawesome.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lobster|Heebo|Roboto|Rajdhani|Open Sans|Lato|Source Sans Pro">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <!-- Tel -->
-    <link rel="stylesheet" href="/static/assets/plugin/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="static/assets/plugin/jquery/jquery-ui.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.16/css/intlTelInput.css"/>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.16/js/intlTelInput.min.js"></script>
-   <!-- End Tel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.16/js/intlTelInput.min.js"></script>
+    <!-- End Tel -->
     <style>
-        p{
+        p {
             font-size: 16px;
         }
     </style>
 </head>
 
-
 <body>
-    <!-- testing -->
-
-<!-- End TESTING -->
-
-<!-- messages -->
-
-<!-- end messages -->
     <div class="site-container">
-         <!-- ## -->
+        <!-- Desktop Navbar -->
         <div class="d-none d-lg-block">
             <nav class="navbar navbar-expand-lg px-4 fixed-top border-b dark-bg" style="z-index:99 !important; font-family: 'roboto';">
                 <div style="margin-left: 300px;">
@@ -45,14 +38,12 @@
                         DASHBOARD
                     </h5>
                 </div>
-
                 <div style="margin-left: 300px;">
                     <h5 class="textColor">
                         <i class="site-green"></i>
                         Account Type: Single Account
                     </h5>
                 </div>
-               
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mr-2 mt-2">
                         <i class="material-icons-outlined fixIcon4 post-box p-1 blue-bg" style="font-size: 24px; border-radius: 50%; color: #fff;">
@@ -73,296 +64,78 @@
             </nav>
         </div>
 
-        <!-- mobile nav bar -->
+        <!-- Mobile Navbar -->
         <div class="d-block d-lg-none container-fluid sticky-top mobileNavBg" style="z-index: 3;">
             <div class="row py-2">
                 <div class="col-6">
-                    <a class="navbar-brand" href="/">
+                    <a class="navbar-brand" href="index.html">
                         <span>
-                            <img src="/static/assets/images/fgh-logo.png" alt="fgh-logo"
-                                style="width:28px; height: 28px">
+                            <img src="static/assets/images/fgh-logo.png" alt="fgh-logo" style="width:28px; height: 28px">
                         </span>
                     </a>
                     <small class="textColor2">
                         <i class="fa fa-caret-right"></i>
                         <b>DASHBOARD</b>
-                    </small>                  
+                    </small>
                 </div>
                 <div class="col-6 align-right">
                     <span class="p-2 fixIcon" onclick="accountMangt(this)">
                         <i class="material-icons-outlined fixIcon2" style="font-size: 28px; color: #fff;">
                             person
                         </i>
-                        
-                          <i class="fa fa-circle redText" style="font-size: 8px;"></i>
-                        
+                        <i class="fa fa-circle redText" style="font-size: 8px;"></i>
                     </span>
-                    
                     <span class="p-2 fixIcon" onclick="openSideBarSm()" id="toggleDrawer">
                         <i class="fi fi-rr-apps textColor2" style="font-size: 22px;"></i>
                     </span>
                 </div>
             </div>
         </div>
-        <!-- End top nav mobile -->
 
-        <!-- sidebar Mobile -->
+        <!-- Sidebar Mobile -->
         <div class="d-block d-sm-none">
-    <div class="overlayDiv" id="overlayDiv" onclick="hideSideBarSm()" style="z-index: 9;"></div>
-
-    <div class="side-bar-mobile" id="sideBarSm" style="display: none; padding-bottom: 10px;">
-        <div class="side-bar-mobile-inner" style="height: 100%; overflow-y: scroll; padding-bottom: 40px;">
-            <div class="mt-2 border-b py-2">
-                <h4 class="reduceH5 text-center" style="font-family:'Ubuntu';">
-                    <span class="greyWhite2"><b>Trustexfussion</b></span>
-                </h4>
-            </div>
-            <!-- ******* -->
-    
-            <div class="container-fluid pr-0 pl-3 mt-3">
-                <div class="mb-2 pl-3">
-                    <small class="greyWhite2">Management/Wallets</small>
-                </div>
-                <a href="/dashboard/" class="textColor xsmall my-2">
-                    <div class="side-link side_bar_link_active px-3">
-                        <i class="material-icons-round fixIcon" style="font-size: 16px;">dashboard</i> &nbsp;
-                        Dashboard
+            <div class="overlayDiv" id="overlayDiv" onclick="hideSideBarSm()" style="z-index: 9;"></div>
+            <div class="side-bar-mobile" id="sideBarSm" style="display: none; padding-bottom: 10px;">
+                <div class="side-bar-mobile-inner" style="height: 100%; overflow-y: scroll; padding-bottom: 40px;">
+                    <div class="mt-2 border-b py-2">
+                        <h4 class="reduceH5 text-center" style="font-family:'Ubuntu';">
+                            <span class="greyWhite2"><b>Trustexfussion</b></span>
+                        </h4>
                     </div>
-                </a>
-
-                <a href="/dashboard/" class="textColor xsmall" data-toggle="collapse" data-target="#walletOptions">
-                    <div class="side-link px-3 mt-4">
-                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">account_balance_wallet</i> &nbsp;
-                        Wallet
-                        <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
-                    </div>
-                </a>
-                <!-- wallets -->
-                <div class="collapse" id="walletOptions">
-                    <div class="container">
-                        <div class="mt-3 ml-4">
-                            <a href="/wallet/assets" class="greyWhite2 xsmall">
-                                Balances
-                            </a>
+                    <div class="container-fluid pr-0 pl-3 mt-3">
+                        <div class="mb-2 pl-3">
+                            <small class="greyWhite2">Management/Wallets</small>
                         </div>
-                        <div class="mt-3 ml-4">
-                            <a href="/wallet/deposit" class="greyWhite2 xsmall">
-                                Deposit
-                            </a>
-                        </div>
-                        <div class="mt-3 ml-4">
-                            <a href="/wallet/withdrawal" class="greyWhite2 xsmall">
-                                Withdraw
-                            </a>
-                        </div>
-                        <div class="mt-3 ml-4">
-                            <a href="/wallet/transfer" class="greyWhite2 xsmall">
-                                Transfer Asset
-                            </a>
-                        </div>
-                    </div>
-                </div> 
-                <!-- Wallets end -->
-    
-                <a href="/dashboard/" class="textColor xsmall" data-toggle="collapse" data-target="#txnOptions">
-                    <div class="side-link px-3 mt-4">
-                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">receipt_long</i> &nbsp;
-                        Transactions
-                        <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
-                    </div>
-                </a>
-                <div class="collapse" id="txnOptions">
-                    <div class="container">
-                        <div class="mt-3 ml-4">
-                            <a href="/wallet/transactions" class="greyWhite2 xsmall">
-                                Pending Orders
-                            </a>
-                        </div>
-                        <div class="mt-3 ml-4">
-                            <a href="/wallet/transaction-history" class="greyWhite2 xsmall">
-                                Transaction History
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <a href="/dashboard/" class="textColor xsmall" data-toggle="collapse" data-target="#profileOptions">
-                    <div class="side-link px-3 mt-4">
-                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">settings</i> &nbsp;
-                        Settings
-                        <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
-                    </div>
-                </a>
-                <!-- Profile -->
-                <div class="collapse" id="profileOptions">
-                    <div class="container">
-                        <div class="mt-3 ml-4">
-                            <a href="/accounts/account-verification/" class="greyWhite2 xsmall">
-                                Verification
-                            </a>
-                        </div>
-                        <div class="mt-3 ml-4">
-                            <a href="/accounts/payment-settings/" class="greyWhite2 xsmall">
-                                Withdrawal Address
-                            </a>
-                        </div>
-                        <div class="mt-3 ml-4">
-                            <a href="/wallet/membership-application" class="greyWhite2 xsmall">
-                                Membership Card
-                            </a>
-                        </div>
-                        <div class="mt-3 ml-4">
-                            <a href="/wallet/withdrawal-card" class="greyWhite2 xsmall">
-                                Exclusive Withdrawal Card
-                            </a>
-                        </div>
-                        <div class="mt-3 ml-4">
-                            <a href="/accounts/security-settings/" class="greyWhite2 xsmall">
-                                Security Settings
-                            </a>
-                        </div>
-                        <div class="mt-3 ml-4">
-                            <a href="/accounts/update-profile" class="greyWhite2 xsmall">
-                                Profile
-                            </a>
-                        </div>
-                        <div class="mt-3 ml-4">
-                            <a href="/accounts/register-agents/" class="greyWhite2 xsmall">
-                                Become an Agent
-                            </a>
-                        </div>
-
-                    </div>
-                </div> 
-                <!-- Profile Ends -->
-    
-                <div class="mb-3 mt-4 pl-3">
-                    <small class="greyWhite2">Finance/Earn</small>
-                </div>
-                <a href="/invest/" class="textColor xsmall">
-                    <div class="side-link px-3 mt-4">
-                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">scatter_plot</i> &nbsp;
-                        Invest
-                    </div>
-                </a>
-                <a href="/dashboard/investments" class="textColor xsmall">
-                    <div class="side-link px-3 mt-4">
-                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">leaderboard</i> &nbsp;
-                        My Investments
-                    </div>
-                </a>
-                <a href="/dashboard/investments-gold/" class="textColor xsmall">
-                    <div class="side-link px-3 mt-4">
-                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">leaderboard</i> &nbsp;
-                        My Golds
-                    </div>
-                </a>
-                <a href="/wallet/apply-for-loan/" class="textColor xsmall">
-                    <div class="side-link px-3 mt-4">
-                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
-                        Loan Application
-                    </div>
-                </a>
-                <a href="/wallet/connect-wallet" class="textColor xsmall">
-                    <div class="side-link px-3 mt-4">
-                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
-                        Import Wallet
-                    </div>
-                </a>
-                <div class="mt-4 mb-2 pl-3">
-                    <small class="greyWhite2">Set Theme</small>
-                </div>
-                <div class="tabs-wrapper p-1 ml-2 mt-2" style="border-radius: 5px; width: fit-content;">
-                    
-                        <button class="Btn theme-btn blankBtn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="light">
-                            <i class="fa fa-sun-o"></i>
-                        </button>
-                        <button class="Btn theme-btn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="dark">
-                            <i class="fa fa-moon-o"></i>
-                        </button>
-                    
-
-                </div>
-            </div>
-            <div class="border-t mt-4 pt-3 pl-4">
-                <a href="/accounts/referral" class="textColor xsmall">
-                    <div class="side-link px-3 mt-2">
-                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
-                        Referral
-                    </div>
-                </a>
-                <a href="/accounts/logout/" class="textColor xsmall">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="QSWuOhA3p7etsja5yITv8MvxopoNuzzPBqheP0RlfY7eNLiuxc8jrqLqCH18H9c0">
-                    <div class="side-link px-3 mt-4">
-                        <i class="material-icons-round fixIcon2" style="font-size: 18px;">logout</i> &nbsp;
-                        Sign out
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-</div>
-        <!-- End sidebar mobile -->
-
-
-        <div class="container-fluid" style="height: 100%;">
-            <div class="row" style="height:100%;">
-                <!-- SideBar dkp -->
-                <div class="col-md-2 sideBar sticky-top d-none d-lg-block style-scrollbar pb-4 border-r" style="padding:0px">
-                    <div class="pl-4">
-                        <a class="navbar-brand" href="/">
-                            <h5 class="textColor2 reduceH5 fixIcon2" style="font-family:'rajdhani'">
-                                <span><img src="/static/assets/images/fgh-logo.png" alt="" class="logoStyle" style="width:27px; height: 27px"></span>
-                                <b class="ml-2 fixIcon">Trustexfussion</b>
-                            </h5>
-                        </a><br>
-                    </div>
-                    <div style="font-family: 'roboto';" class="pl-2">
-                        <div class="mt-4 mb-2 pl-4">
-                            <small class="greyWhite3">Management</small>
-                        </div>
-                        <a href="/dashboard/" class="textColor2 xsmall my-2">
+                        <a href="dashboard.html" class="textColor xsmall my-2">
                             <div class="side-link side_bar_link_active px-3">
                                 <i class="material-icons-round fixIcon" style="font-size: 16px;">dashboard</i> &nbsp;
                                 Dashboard
                             </div>
                         </a>
-                        
-                        <a href="/dashboard/" class="textColor2 xsmall" data-toggle="collapse" data-target="#walletOptions">
+                        <a href="#" class="textColor xsmall" data-toggle="collapse" data-target="#walletOptions">
                             <div class="side-link px-3 mt-4">
                                 <i class="material-icons-round fixIcon2" style="font-size: 18px;">account_balance_wallet</i> &nbsp;
                                 Wallet
                                 <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
                             </div>
                         </a>
-                        <!-- wallets -->
                         <div class="collapse" id="walletOptions">
                             <div class="container">
                                 <div class="mt-3 ml-4">
-                                    <a href="/wallet/assets" class="greyWhite xsmall">
-                                        Balances
-                                    </a>
+                                    <a href="../wallet/assets.html" class="greyWhite2 xsmall">Balances</a>
                                 </div>
                                 <div class="mt-3 ml-4">
-                                    <a href="/wallet/deposit" class="greyWhite xsmall">
-                                        Deposit
-                                    </a>
+                                    <a href="../wallet/deposit.html" class="greyWhite2 xsmall">Deposit</a>
                                 </div>
                                 <div class="mt-3 ml-4">
-                                    <a href="/wallet/withdrawal" class="greyWhite xsmall">
-                                        Withdraw
-                                    </a>
+                                    <a href="../wallet/withdrawal.html" class="greyWhite2 xsmall">Withdraw</a>
                                 </div>
                                 <div class="mt-3 ml-4">
-                                    <a href="/wallet/transfer" class="greyWhite xsmall">
-                                        Transfer Asset
-                                    </a>
+                                    <a href="../wallet/transfer.html" class="greyWhite2 xsmall">Transfer Asset</a>
                                 </div>
                             </div>
-                        </div> 
-                        <!-- Wallets end -->
-                        
-                        <a href="/dashboard/" class="textColor2 xsmall" data-toggle="collapse" data-target="#txnOptions">
+                        </div>
+                        <a href="#" class="textColor xsmall" data-toggle="collapse" data-target="#txnOptions">
                             <div class="side-link px-3 mt-4">
                                 <i class="material-icons-round fixIcon2" style="font-size: 18px;">receipt_long</i> &nbsp;
                                 Transactions
@@ -372,85 +145,222 @@
                         <div class="collapse" id="txnOptions">
                             <div class="container">
                                 <div class="mt-3 ml-4">
-                                    <a href="/wallet/transactions" class="greyWhite xsmall">
-                                        Pending Orders
-                                    </a>
+                                    <a href="../wallet/transactions.html" class="greyWhite2 xsmall">Pending Orders</a>
                                 </div>
                                 <div class="mt-3 ml-4">
-                                    <a href="/wallet/transaction-history" class="greyWhite xsmall">
-                                        Transaction History
-                                    </a>
+                                    <a href="../wallet/transaction-history.html" class="greyWhite2 xsmall">Transaction History</a>
                                 </div>
                             </div>
                         </div>
-                        <a href="/dashboard/" class="textColor2 xsmall" data-toggle="collapse" data-target="#profileOptions">
+                        <a href="#" class="textColor xsmall" data-toggle="collapse" data-target="#profileOptions">
                             <div class="side-link px-3 mt-4">
                                 <i class="material-icons-round fixIcon2" style="font-size: 18px;">settings</i> &nbsp;
                                 Settings
                                 <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
                             </div>
                         </a>
-                        <!-- Profile -->
                         <div class="collapse" id="profileOptions">
                             <div class="container">
                                 <div class="mt-3 ml-4">
-                                    <a href="/accounts/account-verification/" class="greyWhite xsmall">
-                                        Verification
-                                    </a>
+                                    <a href="../accounts/account-verification.html" class="greyWhite2 xsmall">Verification</a>
                                 </div>
                                 <div class="mt-3 ml-4">
-                                    <a href="/accounts/payment-settings/" class="greyWhite xsmall">
-                                        Withdrawal Address
-                                    </a>
+                                    <a href="../accounts/payment-settings.html" class="greyWhite2 xsmall">Withdrawal Address</a>
                                 </div>
                                 <div class="mt-3 ml-4">
-                                    <a href="/wallet/membership-application" class="greyWhite xsmall">
-                                        Membership Card
-                                    </a>
+                                    <a href="../wallet/become-member.html" class="greyWhite2 xsmall">Membership Card</a>
                                 </div>
                                 <div class="mt-3 ml-4">
-                                    <a href="/wallet/withdrawal-card" class="greyWhite xsmall">
-                                        Exclusive Withdrawal Card
-                                    </a>
+                                    <a href="../wallet/withdrawal-card.html" class="greyWhite2 xsmall">Exclusive Withdrawal Card</a>
                                 </div>
                                 <div class="mt-3 ml-4">
-                                    <a href="/accounts/security-settings/" class="greyWhite xsmall">
-                                        Security Settings
-                                    </a>
+                                    <a href="../accounts/security-settings.html" class="greyWhite2 xsmall">Security Settings</a>
                                 </div>
                                 <div class="mt-3 ml-4">
-                                    <a href="/accounts/update-profile" class="greyWhite xsmall">
-                                        Profile
-                                    </a>
+                                    <a href="../accounts/update-profile.html" class="greyWhite2 xsmall">Profile</a>
                                 </div>
                                 <div class="mt-3 ml-4">
-                                    <a href="/accounts/register-agents/" class="greyWhite xsmall">
-                                        Register as Agent
-                                    </a>
+                                    <a href="../accounts/register-agents.html" class="greyWhite2 xsmall">Become an Agent</a>
                                 </div>
                             </div>
-                        </div> 
-                        <!-- Profile Ends -->
-                        <a href="/accounts/referral" class="textColor2 xsmall">
+                        </div>
+                        <div class="mb-3 mt-4 pl-3">
+                            <small class="greyWhite2">Finance/Earn</small>
+                        </div>
+                        <a href="../invest/index.html" class="textColor xsmall">
                             <div class="side-link px-3 mt-4">
-                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
-                                Referral
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">scatter_plot</i> &nbsp;
+                                Invest
                             </div>
                         </a>
-
-                        <a href="/accounts/scam-reports/" class="textColor2 xsmall">
+                        <a href="/dashboard/investments.html" class="textColor xsmall">
                             <div class="side-link px-3 mt-4">
-                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
-                                File Recovery Report
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">leaderboard</i> &nbsp;
+                                My Investments
                             </div>
                         </a>
-                        <a href="/wallet/connect-wallet" class="textColor2 xsmall">
+                        <a href="/dashboard/investments-gold.html" class="textColor xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">leaderboard</i> &nbsp;
+                                My Golds
+                            </div>
+                        </a>
+                        <a href="../wallet/apply-for-loan.html" class="textColor xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                                Loan Application
+                            </div>
+                        </a>
+                        <a href="../wallet/connect-wallet.html" class="textColor xsmall">
                             <div class="side-link px-3 mt-4">
                                 <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
                                 Import Wallet
                             </div>
                         </a>
-                        <a href="/wallet/apply-for-loan/" class="textColor2 xsmall">
+                        <div class="mt-4 mb-2 pl-3">
+                            <small class="greyWhite2">Set Theme</small>
+                        </div>
+                        <div class="tabs-wrapper p-1 ml-2 mt-2" style="border-radius: 5px; width: fit-content;">
+                            <button class="Btn theme-btn blankBtn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="light">
+                                <i class="fa fa-sun-o"></i>
+                            </button>
+                            <button class="Btn theme-btn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="dark">
+                                <i class="fa fa-moon-o"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="border-t mt-4 pt-3 pl-4">
+                        <a href="../accounts/referral.html" class="textColor xsmall">
+                            <div class="side-link px-3 mt-2">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                                Referral
+                            </div>
+                        </a>
+                        <a href="index.html" class="textColor xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">logout</i> &nbsp;
+                                Sign out
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container-fluid" style="height: 100%;">
+            <div class="row" style="height:100%;">
+                <!-- Desktop Sidebar -->
+                <div class="col-md-2 sideBar sticky-top d-none d-lg-block style-scrollbar pb-4 border-r" style="padding:0px">
+                    <div class="pl-4">
+                        <a class="navbar-brand" href="index.html">
+                            <h5 class="textColor2 reduceH5 fixIcon2" style="font-family:'rajdhani'">
+                                <span><img src="static/assets/images/fgh-logo.png" alt="" class="logoStyle" style="width:27px; height: 27px"></span>
+                                <b class="ml-2 fixIcon">Trustexfussion</b>
+                            </h5>
+                        </a><br>
+                    </div>
+                    <div style="font-family: 'roboto';" class="pl-2">
+                        <div class="mt-4 mb-2 pl-4">
+                            <small class="greyWhite3">Management</small>
+                        </div>
+                        <a href="dashboard.html" class="textColor2 xsmall my-2">
+                            <div class="side-link side_bar_link_active px-3">
+                                <i class="material-icons-round fixIcon" style="font-size: 16px;">dashboard</i> &nbsp;
+                                Dashboard
+                            </div>
+                        </a>
+                        <a href="#" class="textColor2 xsmall" data-toggle="collapse" data-target="#walletOptions">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">account_balance_wallet</i> &nbsp;
+                                Wallet
+                                <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="walletOptions">
+                            <div class="container">
+                                <div class="mt-3 ml-4">
+                                    <a href="../wallet/assets.html" class="greyWhite xsmall">Balances</a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="../wallet/deposit.html" class="greyWhite xsmall">Deposit</a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="../wallet/withdrawal.html" class="greyWhite xsmall">Withdraw</a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="../wallet/transfer.html" class="greyWhite xsmall">Transfer Asset</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="textColor2 xsmall" data-toggle="collapse" data-target="#txnOptions">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">receipt_long</i> &nbsp;
+                                Transactions
+                                <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="txnOptions">
+                            <div class="container">
+                                <div class="mt-3 ml-4">
+                                    <a href="../wallet/transactions.html" class="greyWhite xsmall">Pending Orders</a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="../wallet/transaction-history.html" class="greyWhite xsmall">Transaction History</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="textColor2 xsmall" data-toggle="collapse" data-target="#profileOptions">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">settings</i> &nbsp;
+                                Settings
+                                <i class="fa fa-caret-down float-right fixIcon4" style="font-size: 18px;"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="profileOptions">
+                            <div class="container">
+                                <div class="mt-3 ml-4">
+                                    <a href="../accounts/account-verification.html" class="greyWhite xsmall">Verification</a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="../accounts/payment-settings.html" class="greyWhite xsmall">Withdrawal Address</a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="../wallet/become-member.html" class="greyWhite xsmall">Membership Card</a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="../wallet/withdrawal-card.html" class="greyWhite xsmall">Exclusive Withdrawal Card</a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="../accounts/security-settings.html" class="greyWhite xsmall">Security Settings</a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="../accounts/update-profile.html" class="greyWhite xsmall">Profile</a>
+                                </div>
+                                <div class="mt-3 ml-4">
+                                    <a href="../accounts/register-agents.html" class="greyWhite xsmall">Register as Agent</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="../accounts/referral.html" class="textColor2 xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                                Referral
+                            </div>
+                        </a>
+                        <a href="../accounts/scam-reports.html" class="textColor2 xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                                File Recovery Report
+                            </div>
+                        </a>
+                        <a href="../wallet/connect-wallet.html" class="textColor2 xsmall">
+                            <div class="side-link px-3 mt-4">
+                                <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
+                                Import Wallet
+                            </div>
+                        </a>
+                        <a href="../wallet/apply-for-loan.html" class="textColor2 xsmall">
                             <div class="side-link px-3 mt-4">
                                 <i class="material-icons-round fixIcon2" style="font-size: 18px;">group_add</i> &nbsp;
                                 Loans
@@ -461,19 +371,19 @@
                         <div class="pl-3">
                             <small class="greyWhite3">Earn/Finance</small>
                         </div>
-                        <a href="/invest/" class="textColor2 xsmall">
+                        <a href="../invest/index.html" class="textColor2 xsmall">
                             <div class="side-link px-3 mt-4">
                                 <i class="material-icons-round fixIcon2" style="font-size: 18px;">scatter_plot</i> &nbsp;
                                 Invest
                             </div>
                         </a>
-                        <a href="/dashboard/investments" class="textColor2 xsmall">
+                        <a href="/dashboard/investments.html" class="textColor2 xsmall">
                             <div class="side-link px-3 mt-4">
                                 <i class="material-icons-round fixIcon2" style="font-size: 18px;">leaderboard</i> &nbsp;
                                 My Investments
                             </div>
                         </a>
-                        <a href="/dashboard/investments-gold/" class="textColor2 xsmall">
+                        <a href="/dashboard/investments-gold.html" class="textColor2 xsmall">
                             <div class="side-link px-3 mt-4">
                                 <i class="material-icons-round fixIcon2" style="font-size: 18px;">leaderboard</i> &nbsp;
                                 My Golds
@@ -484,939 +394,751 @@
                         <small class="greyWhite3">Set Theme</small>
                     </div>
                     <div class="tabs-wrapper p-1 ml-4 mt-3" style="border-radius: 5px; width: fit-content;">
-                        
-                            <button class="Btn theme-btn blankBtn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="light">
-                                Light
-                            </button>
-                            <button class="Btn theme-btn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="dark">
-                                Dark
-                            </button>
-                        
+                        <button class="Btn theme-btn blankBtn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="light">
+                            Light
+                        </button>
+                        <button class="Btn theme-btn xsmall2 py-1 px-3" style="width: fit-content;" onclick="setTheme(this)" id="dark">
+                            Dark
+                        </button>
                     </div>
                 </div>
-                
-<div class="col-md-10 d-none d-lg-block" style="font-family: 'roboto'; min-width: 75%;">
-    <div class="row">
-        <div class="col-8 fix-mt" style="padding-bottom: 60px;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="mb-2">
-                            <small class="boldText greyWhite2">Assets</small>
-                        </div>
-                    </div>
-                    <!-- == -->
-                    <div class="col-4">
-                        <div class="post-box shadow-sm" style="height: 120px;">
-                            <div class="mb-2">
-                                <small class="xsmall2 greyWhite">Total Asset Value (USD)</small>
-                            </div>
-                            <h5>
-                                $ 0.00 <br>
-                                <small>
-                                    ≈
-                                    <span class="btcBalance">***</span> BTC
-                                </small>
-                            </h5>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="post-box shadow-sm" style="height: 120px;">
-                            <div class="mb-2">
-                                <small class="xsmall2 greyWhite">Spot Balance (USD)</small>
-                            </div>
-                            <h5>
-                                $ 0.00
-                            </h5>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="post-box shadow-sm" style="height: 120px;">
-                            <div class="mb-2">
-                                <small class="xsmall2 greyWhite">Gold Balance</small>
-                            </div>
-                            <h5 class="greenText">
-                                $0.00
-                            </h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
 
-            <div class="container">
-                <div class="row mt-4">
-                    <div class="col-12">
-                        <h5 class="mb-3">
-                            <small class="boldText greyWhite2">My Investments</small><br>
-                        </h5>
-                        <div class="post-box style-scrollbar p-4" style="border: none; height: 300px; overflow-y: scroll; overflow-x: hidden;">
-                            
-                                <div class="align-center mt-3 px-4">
-                                    <div class="py-4">
-                                        <i class="fi fi-rr-search-alt greyWhite2" style="font-size: 42px;"></i>
+                <!-- Desktop Main Content -->
+                <div class="col-md-10 d-none d-lg-block" style="font-family: 'roboto'; min-width: 75%;">
+                    <div class="row">
+                        <div class="col-8 fix-mt" style="padding-bottom: 60px;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="mb-2">
+                                            <small class="boldText greyWhite2">Assets</small>
+                                        </div>
                                     </div>
-                                    <h5 class="reduceH5">
-                                        No data found
-                                    </h5>
-                                    <div class="mt-4">
-                                        <a href="/invest/" class="site-yellow">
-                                            Invest now
+                                    <div class="col-4">
+                                        <div class="post-box shadow-sm" style="height: 120px;">
+                                            <div class="mb-2">
+                                                <small class="xsmall2 greyWhite">Total Asset Value (USD)</small>
+                                            </div>
+                                            <h5>
+                                                $ 0.00 <br>
+                                                <small>
+                                                    ≈
+                                                    <span class="btcBalance">***</span> BTC
+                                                </small>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="post-box shadow-sm" style="height: 120px;">
+                                            <div class="mb-2">
+                                                <small class="xsmall2 greyWhite">Spot Balance (USD)</small>
+                                            </div>
+                                            <h5>
+                                                $ 0.00
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="post-box shadow-sm" style="height: 120px;">
+                                            <div class="mb-2">
+                                                <small class="xsmall2 greyWhite">Gold Balance</small>
+                                            </div>
+                                            <h5 class="greenText">
+                                                $0.00
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row mt-4">
+                                    <div class="col-12">
+                                        <h5 class="mb-3">
+                                            <small class="boldText greyWhite2">My Investments</small><br>
+                                        </h5>
+                                        <div class="post-box style-scrollbar p-4" style="border: none; height: 300px; overflow-y: scroll; overflow-x: hidden;">
+                                            <div class="align-center mt-3 px-4">
+                                                <div class="py-4">
+                                                    <i class="fi fi-rr-search-alt greyWhite2" style="font-size: 42px;"></i>
+                                                </div>
+                                                <h5 class="reduceH5">
+                                                    No data found
+                                                </h5>
+                                                <div class="mt-4">
+                                                    <a href="../invest/index.html" class="site-yellow">Invest now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row mt-4">
+                                    <div class="col-12">
+                                        <h5 class="mb-3">
+                                            <small class="boldText greyWhite2">My Gold Purchase</small><br>
+                                        </h5>
+                                        <div class="post-box style-scrollbar p-4" style="border: none; height: 300px; overflow-y: scroll; overflow-x: hidden;">
+                                            <div class="align-center mt-3 px-4">
+                                                <div class="py-4">
+                                                    <i class="fi fi-rr-search-alt greyWhite2" style="font-size: 42px;"></i>
+                                                </div>
+                                                <h5 class="reduceH5">
+                                                    No data found
+                                                </h5>
+                                                <div class="mt-4">
+                                                    <a href="dashboard/gold.html" class="site-yellow">Invest now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row mt-4">
+                                    <div class="col-12 mb-2">
+                                        <h5 class="mb-3">
+                                            <small class="boldText greyWhite2">Coin market rates</small><br>
+                                        </h5>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="post-box" style="border: none;">
+                                            <div>
+                                                <img src="static/assets/images/btc_icon.png" alt="btc" style="width: 20px; height: 20px;">&nbsp;&nbsp;
+                                                <small>BTC/USD</small>
+                                            </div>
+                                            <h5 class="reduceH5 mt-2">
+                                                <small class="xsmall2 greyWhite">
+                                                    <i class="fa fa-caret-right"></i> Bitcoin Price
+                                                </small> <br>
+                                                $ <span id="btcPrice" class="textColor">---</span>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="post-box" style="border: none;">
+                                            <div>
+                                                <img src="static/assets/images/eth_icon.png" alt="btc" style="width: 20px; height: 20px;">&nbsp;&nbsp;
+                                                <small>ETH/USD</small>
+                                            </div>
+                                            <h5 class="reduceH5 mt-2">
+                                                <small class="xsmall2 greyWhite">
+                                                    <i class="fa fa-caret-right"></i> Ethereum Price
+                                                </small> <br>
+                                                $ <span id="ethPrice" class="textColor">---</span>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="post-box" style="border: none;">
+                                            <div>
+                                                <img src="static/assets/images/bnb_icon.png" alt="btc" style="width: 20px; height: 20px;">&nbsp;&nbsp;
+                                                <small>BNB/USD</small>
+                                            </div>
+                                            <h5 class="reduceH5 mt-2">
+                                                <small class="xsmall2 greyWhite">
+                                                    <i class="fa fa-caret-right"></i> Bnb Price
+                                                </small> <br>
+                                                $ <span id="bnbPrice" class="textColor">---</span>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="post-box" style="border: none;">
+                                            <div>
+                                                <img src="static/assets/images/solana_icon.png" alt="btc" style="width: 20px; height: 20px;">&nbsp;&nbsp;
+                                                <small>SOL/USD</small>
+                                            </div>
+                                            <h5 class="reduceH5 mt-2">
+                                                <small class="xsmall2 greyWhite">
+                                                    <i class="fa fa-caret-right"></i> Solana Price
+                                                </small> <br>
+                                                $ <span id="solPrice" class="textColor">---</span>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 sticky-top dark-bg border-l" style="height: 100vh; z-index: 2;">
+                            <div class="post-box mb-3 fix-mt border-none p-4">
+                                <div class="col-8">
+                                    <small class="greyWhite">Investments (Active)</small>
+                                    <h4>0 <small class="greyWhite2">Running</small></h4>
+                                </div>
+                            </div>
+                            <div class="post-box p-4" style="border: none;">
+                                <div class="row border-b pb-2 mb-3">
+                                    <div class="col-7">
+                                        <h5 class="reduceH5">
+                                            Recent Transactions
+                                        </h5>
+                                    </div>
+                                    <div class="col-5 align-right">
+                                        <a href="wallet/transaction-history.html">
+                                            <small class="xsmall">See all <i class="fi fi-rr-arrow-small-right fixIcon"></i></small>
                                         </a>
                                     </div>
                                 </div>
-                            
-    
-                            
+                                <div class="row my-4">
+                                    <div class="col-5">
+                                        <h5 style="color: #000; margin-top: 4px;">
+                                            <span class="badge badge-light" style="background: #e3fae8;">
+                                                <i class="fi fi-rr-arrow-down fixIcon" style="color: #4fe770;"></i>
+                                            </span> &nbsp;
+                                            <small class="mainBlack xsmall">Deposit</small>
+                                        </h5>
+                                    </div>
+                                    <div class="col-3 fixIcon-2">
+                                        <small class="greyBlack">21-07-25</small>
+                                    </div>
+                                    <div class="col-4 fixIcon-2 align-center">
+                                        <small class="site-green" style="margin-top: 4px;">
+                                            $ 10000.00
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row mt-4">
-                    <div class="col-12">
-                        <h5 class="mb-3">
-                            <small class="boldText greyWhite2">My Gold Purchase</small><br>
-                        </h5>
-                        <div class="post-box style-scrollbar p-4" style="border: none; height: 300px; overflow-y: scroll; overflow-x: hidden;">
-                            
-                                <div class="align-center mt-3 px-4">
-                                    <div class="py-4">
-                                        <i class="fi fi-rr-search-alt greyWhite2" style="font-size: 42px;"></i>
+
+                <!-- Mobile Main Content -->
+                <div class="col-12 d-block d-lg-none" style="padding:0px; font-family: 'roboto';">
+                    <div class="px-2 pt-3 mt-2">
+                        <div class="post-box no-border-sm p-3">
+                            <small class="greyWhite">Total Asset Value (USD)</small>
+                            <h4 class="roboto">
+                                <b>$0.00</b>
+                            </h4>
+                            <div class="mt-3 border-t row">
+                                <div class="col-12">
+                                    <div class="row mt-2">
+                                        <div class="col-6 border-r">
+                                            <small class="greyWhite2">Investments (Active)</small>
+                                            <h5 class="bol-text roboto reduceH5">0 <span class="greyWhite2 xsmall2">Running</span></h5>
+                                        </div>
+                                        <div class="col-6">
+                                            <small class="greyWhite2">Gold Balance</small>
+                                            <h5 class="bol-text roboto reduceH5">$0.00</h5>
+                                        </div>
                                     </div>
-                                    <h5 class="reduceH5">
-                                        No data found
-                                    </h5>
-                                    <div class="mt-4">
-                                        <a href="/dashboard/gold" class="site-yellow">
-                                            Invest now
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Promo Slider Section -->
+                    <style>
+                        .promo-section {
+                            width: 100%;
+                            padding: 1rem;
+                            background: #1a1d25;
+                            overflow: hidden;
+                        }
+                        .promo-slider {
+                            position: relative;
+                            width: 100%;
+                        }
+                        .promo-slide {
+                            display: none;
+                            width: 100%;
+                            padding: 1rem;
+                        }
+                        .promo-slide.active {
+                            display: block;
+                        }
+                        .promo-card {
+                            background: linear-gradient(135deg, #6366f1, #4f46e5);
+                            border-radius: 0.75rem;
+                            padding: 1.5rem;
+                            height: auto;
+                            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                        }
+                        .promo-title {
+                            font-size: 1.25rem;
+                            font-weight: 600;
+                            color: white;
+                            margin-bottom: 0.75rem;
+                            line-height: 1.2;
+                        }
+                        .promo-description {
+                            font-size: 0.875rem;
+                            color: rgba(255, 255, 255, 0.9);
+                            margin-bottom: 1rem;
+                            line-height: 1.5;
+                        }
+                        .promo-price-range {
+                            background: rgba(255, 255, 255, 0.1);
+                            border-radius: 0.5rem;
+                            padding: 0.75rem;
+                            margin-bottom: 1rem;
+                            text-align: center;
+                            color: white;
+                        }
+                        .price-label {
+                            display: block;
+                            margin-bottom: 0.25rem;
+                            font-size: 0.875rem;
+                        }
+                        .price-value {
+                            font-size: 1.125rem;
+                            font-weight: 600;
+                        }
+                        .btn-create {
+                            width: 100%;
+                            background: white;
+                            color: #4f46e5;
+                            border: none;
+                            border-radius: 0.5rem;
+                            padding: 0.75rem;
+                            font-weight: 600;
+                            font-size: 0.875rem;
+                        }
+                        .slider-dots {
+                            display: flex;
+                            justify-content: center;
+                            gap: 0.5rem;
+                            margin-top: 1rem;
+                        }
+                        .dot {
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 50%;
+                            background: rgba(255, 255, 255, 0.3);
+                            cursor: pointer;
+                        }
+                        .dot.active {
+                            background: white;
+                        }
+                    </style>
+                    <div class="promo-section">
+                        <div class="promo-slider">
+                            <!-- Static promo example since dynamic data requires backend -->
+                            <div class="promo-slide active">
+                                <div class="promo-card">
+                                    <div class="promo-title">Sample Promo</div>
+                                    <div class="promo-description">Invest in our premium package today!</div>
+                                    <div class="promo-price-range">
+                                        <span class="price-label">Price Range</span>
+                                        <span class="price-value">$100 - $1000</span>
+                                    </div>
+                                    <button class="btn-create" onclick="alert('Contact support to invest!')">Invest Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-dots">
+                            <span class="dot active" data-index="0"></span>
+                        </div>
+                    </div>
+                    <script>
+                        $(document).ready(function() {
+                            const $slides = $('.promo-slide');
+                            const $dots = $('.dot');
+                            let currentIndex = 0;
+                            let touchStartX = 0;
+                            let touchEndX = 0;
+                            function showSlide(index) {
+                                $slides.removeClass('active');
+                                $dots.removeClass('active');
+                                $slides.eq(index).addClass('active');
+                                $dots.eq(index).addClass('active');
+                            }
+                            function nextSlide() {
+                                currentIndex = (currentIndex + 1) % $slides.length;
+                                showSlide(currentIndex);
+                            }
+                            function prevSlide() {
+                                currentIndex = (currentIndex - 1 + $slides.length) % $slides.length;
+                                showSlide(currentIndex);
+                            }
+                            $dots.on('click', function() {
+                                currentIndex = $(this).data('index');
+                                showSlide(currentIndex);
+                            });
+                            $('.promo-slider').on('touchstart', function(e) {
+                                touchStartX = e.touches[0].clientX;
+                            });
+                            $('.promo-slider').on('touchend', function(e) {
+                                touchEndX = e.changedTouches[0].clientX;
+                                const diff = touchStartX - touchEndX;
+                                if (Math.abs(diff) > 50) {
+                                    if (diff > 0) {
+                                        nextSlide();
+                                    } else {
+                                        prevSlide();
+                                    }
+                                }
+                            });
+                            setInterval(nextSlide, 4000);
+                        });
+                    </script>
+                    <div class="container-fluid pt-4 dark-bg mt-2 curve-top" style="padding-bottom: 80px;">
+                        <div class="container-fluid" style="font-family: 'roboto';">
+                            <div class="row">
+                                <div class="col-3 align-center">
+                                    <a href="wallet/deposit.html">
+                                        <i class="material-icons-outlined BtnDark fit-content p-3" style="font-size: 18px;">
+                                            arrow_downward
+                                        </i>
+                                        <small class="d-block mt-1">Deposit</small>
+                                    </a>
+                                </div>
+                                <div class="col-3 align-center">
+                                    <a href="../invest/index.html">
+                                        <i class="material-icons-round BtnDark fit-content p-3 site-yellow" style="font-size: 18px;">
+                                            stacked_bar_chart
+                                        </i>
+                                        <small class="d-block mt-1">Invest/Earn</small>
+                                    </a>
+                                </div>
+                                <div class="col-3 align-center">
+                                    <a href="wallet/withdrawal.html">
+                                        <i class="material-icons-round BtnDark fit-content p-3" style="font-size: 18px;">
+                                            north_east
+                                        </i>
+                                        <small class="d-block mt-1">Withdraw</small>
+                                    </a>
+                                </div>
+                                <div class="col-3 align-center">
+                                    <a href="accounts/referral.html">
+                                        <i class="material-icons-round BtnDark fit-content p-3" style="font-size: 18px;">
+                                            group_add
+                                        </i>
+                                        <small class="d-block mt-1">Referral</small>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12 mt-4">
+                                <div class="row mb-2">
+                                    <div class="col-6">
+                                        <small class="xsmall2 greyWhite2 fixIcon2">Crypto market rates</small>
+                                    </div>
+                                    <div class="col-6 align-right">
+                                        <a href="coin-market-price.html">
+                                            <small class="xsmall2 greyWhite post-box no-border-sm py-1">More
+                                                <i class="fa fa-caret-right"></i>
+                                            </small>
                                         </a>
                                     </div>
                                 </div>
-                            
-    
-                            
+                            </div>
+                            <div class="scrollmenu pl-2 pr-4 mt-2" style="width: 100vw;">
+                                <div class="s-m-item mr-2 border-r pr-2">
+                                    <div>
+                                        <small class="boldText greyWhite">BTC/USD</small>
+                                        <img src="static/assets/images/btc_icon.png" alt="btc" style="width: 17px; height: 17px;">
+                                    </div>
+                                    <h5 class="mt-1 reduceH5">
+                                        <span class="textColor btcPrice">
+                                            <i class="fa-spin fa fa-spinner textColor"></i>
+                                        </span>
+                                    </h5>
+                                </div>
+                                <div class="s-m-item mr-2 border-r pr-2">
+                                    <div>
+                                        <small class="boldText greyWhite">ETH/USD</small>
+                                        <img src="static/assets/images/eth_icon.png" alt="eth" style="width: 17px; height: 17px;">
+                                    </div>
+                                    <h5 class="mt-1 reduceH5">
+                                        <span class="ethPrice textColor"><i class="fa-spin fa fa-spinner textColor"></i></span>
+                                    </h5>
+                                </div>
+                                <div class="s-m-item mr-2 border-r pr-2">
+                                    <div>
+                                        <small class="boldText greyWhite">BNB/USD</small>
+                                        <img src="static/assets/images/bnb_icon.png" alt="bnb" style="width: 17px; height: 17px;">
+                                    </div>
+                                    <h5 class="mt-1 reduceH5">
+                                        <span class="textColor bnbPrice"><i class="fa-spin fa fa-spinner textColor"></i></span>
+                                    </h5>
+                                </div>
+                                <div class="s-m-item mr-2 border-r pr-2">
+                                    <div>
+                                        <small class="boldText greyWhite">SOL/USD</small>
+                                        <img src="static/assets/images/solana_icon.png" alt="sol" style="width: 17px; height: 17px;">
+                                    </div>
+                                    <h5 class="reduceH5 mt-1">
+                                        <span class="textColor solPrice"><i class="fa-spin fa fa-spinner textColor"></i></span>
+                                    </h5>
+                                </div>
+                                <div class="s-m-item mr-2 border-r pr-2">
+                                    <div>
+                                        <small class="boldText greyWhite">ADA/USD</small>
+                                        <img src="static/assets/images/cardano_icon.png" alt="ada" style="width: 17px; height: 17px;">
+                                    </div>
+                                    <h5 class="mt-1 reduceH5">
+                                        <span class="adaPrice textColor"><i class="fa-spin fa fa-spinner textColor"></i></span>
+                                    </h5>
+                                </div>
+                                <div class="s-m-item mr-2 pr-2">
+                                    <div>
+                                        <small class="boldText greyWhite">DOGE/USD</small>
+                                        <img src="static/assets/images/doge_icon.jpg" alt="doge" style="width: 17px; height: 17px;">
+                                    </div>
+                                    <h5 class="mt-1 reduceH5">
+                                        <span class="dogePrice textColor"><i class="fa-spin fa fa-spinner textColor"></i></span>
+                                    </h5>
+                                </div>
+                            </div>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                            <script>
+                                var coinListApiSettings = {
+                                    'async': true,
+                                    'scrossDomain': true,
+                                    'url': 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cbinancecoin%2Cdogecoin%2Ccardano%2Csolana&vs_currencies=usd',
+                                    'method': 'GET',
+                                    'headers': {}
+                                }
+                                const getCoinPrice = () => {
+                                    $.ajax(coinListApiSettings).done(function(res) {
+                                        $('.btcPrice').each(function() {
+                                            $(this).html((res.bitcoin.usd).toLocaleString());
+                                        });
+                                        $('.ethPrice').each(function() {
+                                            $(this).html((res.ethereum.usd).toLocaleString());
+                                        });
+                                        $('.bnbPrice').each(function() {
+                                            $(this).html((res.binancecoin.usd).toLocaleString());
+                                        });
+                                        $('.adaPrice').each(function() {
+                                            $(this).html((res.cardano.usd).toLocaleString());
+                                        });
+                                        $('.solPrice').each(function() {
+                                            $(this).html((res.solana.usd).toLocaleString());
+                                        });
+                                        $('.dogePrice').each(function() {
+                                            $(this).html((res.dogecoin.usd).toLocaleString());
+                                        });
+                                    });
+                                }
+                                setTimeout(getCoinPrice, 2000);
+                            </script>
+                        </div>
+                        <div class="border-t row pt-4 mb-2 mt-4">
+                            <div class="col-8">
+                                <small class="xsmall greyWhite2">My Investments</small>
+                            </div>
+                            <div class="col-4 text-right">
+                                <a href="/dashboard/investments.html">
+                                    <small class="xsmall2 greyWhite post-box no-border-sm py-1">Expand
+                                        <i class="fa fa-caret-right"></i>
+                                    </small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="align-center mt-3 py-50">
+                                    <div>
+                                        <i class="fi fi-rr-search-alt greyWhite2" style="font-size: 42px;"></i>
+                                    </div>
+                                    <h5 class="reduceH5 greyWhite2">
+                                        No data found
+                                    </h5>
+                                    <div class="mt-2">
+                                        <a href="../invest/index.html" class="site-yellow">Invest now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="max-height: 250px; overflow-y: scroll; overflow-x: hidden;" class="py-4">
+                        </div>
+                        <div class="mt-4 row border-t pt-4">
+                            <div class="col-7">
+                                <h5 class="reduceH5 greyWhite">
+                                    Recent Transactions
+                                </h5>
+                            </div>
+                            <div class="col-5 align-right">
+                                <a href="wallet/transaction-history.html">
+                                    <small class="xsmall2 greyWhite post-box no-border-sm py-1">See All
+                                        <i class="fa fa-caret-right"></i>
+                                    </small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-5">
+                                <small class="xsmall2 greyWhite2">Txn</small>
+                            </div>
+                            <div class="col-3">
+                                <small class="xsmall2 greyWhite2">Date</small>
+                            </div>
+                            <div class="col-3">
+                                <small class="xsmall2 greyWhite2">Value</small>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-5">
+                                <h5 style="color: #000; margin-top: 4px;">
+                                    <i class="material-icons-outlined fixIcon3 site-yellow" style="font-size: 18px;">
+                                        arrow_downward
+                                    </i>
+                                    <small class="xsmall greyWhite">Deposit</small>
+                                </h5>
+                            </div>
+                            <div class="col-3 fixIcon3">
+                                <small class="xsmall2 greyBlack">21-07-25</small>
+                            </div>
+                            <div class="col-4 fixIcon3">
+                                <h5 class="xsmall site-green" style="margin-top: 4px;">
+                                    $ 10000.00
+                                </h5>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row mt-4">
-                    <div class="col-12 mb-2">
-                        <h5 class="mb-3">
-                            <small class="boldText greyWhite2">Coin market rates</small><br>
-                        </h5>
-                    </div>
-                    <div class="col-3">
-    <div class="post-box" style="border: none;">
-        <div>
-            <img src="/static/assets/images/btc_icon.png" alt="btc" style="width: 20px; height: 20px;">&nbsp;&nbsp;
-            <small>BTC/USD</small>
-        </div> 
-        <h5 class="reduceH5 mt-2">
-            <small class="xsmall2 greyWhite">
-                <i class="fa fa-caret-right"></i> Bitcoin Price
-            </small> <br>
-            $ <span id="btcPrice" class="textColor">---</span>
-        </h5>  
-    </div>
-</div>
-
-<div class="col-3">
-    <div class="post-box" style="border: none;">
-        <div>
-            <img src="/static/assets/images/eth_icon.png" alt="btc" style="width: 20px; height: 20px;">&nbsp;&nbsp;
-            <small>ETH/USD</small>
-        </div> 
-        <h5 class="reduceH5 mt-2">
-            <small class="xsmall2 greyWhite">
-                <i class="fa fa-caret-right"></i> Ethereum Price
-            </small> <br>
-            $ <span id="ethPrice" class="textColor">---</span>
-        </h5>  
-    </div>
-</div>
-
-<div class="col-3">
-    <div class="post-box" style="border: none;">
-        <div>
-            <img src="/static/assets/images/bnb_icon.png" alt="btc" style="width: 20px; height: 20px;">&nbsp;&nbsp;
-            <small>BNB/USD</small>
-        </div> 
-        <h5 class="reduceH5 mt-2">
-            <small class="xsmall2 greyWhite">
-                <i class="fa fa-caret-right"></i> Bnb Price
-            </small> <br>
-            $ <span id="bnbPrice" class="textColor">---</span>
-        </h5>  
-    </div>
-</div>
-
-<div class="col-3">
-    <div class="post-box" style="border: none;">
-        <div>
-            <img src="/static/assets/images/solana_icon.png" alt="btc" style="width: 20px; height: 20px;">&nbsp;&nbsp;
-            <small>SOL/USD</small>
-        </div> 
-        <h5 class="reduceH5 mt-2">
-            <small class="xsmall2 greyWhite">
-                <i class="fa fa-caret-right"></i> Solana Price
-            </small> <br>
-            $ <span id="solPrice" class="textColor">---</span>
-        </h5>  
-    </div>
-</div>
-
-
-
-
-                </div>
-            </div>
-        </div>
-
-        <!-- ====================== -->
-        <div class="col-4 sticky-top dark-bg border-l" style="height: 100vh; z-index: 2;">
-            <div class="post-box mb-3 fix-mt border-none p-4">
-                <div class="col-8">
-                    <small class="greyWhite">Investments (Active)</small>
-                    <h4>0 <small class="greyWhite2">Running</small></h2>
-                </div>
-            </div>
-            <div class="post-box p-4" style="border: none;">
-                <div class="row border-b pb-2 mb-3">
-                    <div class="col-7">
-                        <h5 class="reduceH5">
-                            Recent Transactions
-                        </h5>
-                    </div>
-                    <div class="col-5 align-right">
-                        <a href="/wallet/transaction-history">
-                            <small class="xsmall">See all <i class="fi fi-rr-arrow-small-right fixIcon"></i></small>
-                        </a>
-                    </div>
-                </div>
-                
-                
-                <div class="row my-4">
-                    <div class="col-5">
-                        
-                        <h5 style="color: #000; margin-top: 4px;">
-                            <span class="badge badge-light" style="background: #e3fae8;">
-                                <i class="fi fi-rr-arrow-down fixIcon" style="color: #4fe770;"></i>
-                            </span> &nbsp;
-                            <small class="mainBlack xsmall">Deposit</small>
-                        </h5>
-                        
-                    </div>
-                    <div class="col-3 fixIcon-2">
-                        <small class="greyBlack">21-07-25</small>
-                    </div>
-                    <div class="col-4 fixIcon-2 align-center">
-                        <small class="site-green" style="margin-top: 4px;">
-                            $ 10000.00
-                        </small>
-                    </div>
-                </div>
-                
-                
-            </div>
-        </div>
-    </div>
-
-</div>
-  
-    <!-- MOBILE -->
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<style>
-    /* Modal Styles */
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .modal-content {
-        background-color: white;
-        margin: 10% auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 90%;
-        max-width: 500px;
-        border-radius: 10px;
-    }
-
-    .close {
-        float: right;
-        cursor: pointer;
-        font-size: 24px;
-    }
-
-    .close:hover {
-        color: #000;
-    }
-
-    .promo-price-range {
-        font-size: 1.2rem;
-        margin: 15px 0;
-        text-align: center;
-    }
-
-    .form-group {
-        margin-bottom: 15px;
-    }
-
-    .form-group label {
-        display: block;
-        margin-bottom: 5px;
-    }
-
-    .form-group input {
-        width: 100%;
-        padding: 8px;
-        box-sizing: border-box;
-    }
-    .modal-content {
-        background: linear-gradient(to right, #6a11cb, #2575fc);
-        color: white;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        animation: fadeIn 0.3s ease;
-    }
-
-    .btn-create {
-        background-color: #ff5722;
-        border: none;
-        font-size: 1rem;
-        font-weight: bold;
-        transition: background-color 0.3s;
-    }
-
-    .btn-create:hover {
-        background-color: #e64a19;
-    }
-
-    #amountWarning {
-        font-size: 0.85rem;
-        margin-top: 0.5rem;
-    }
-
-</style>
-<div class="col-12 d-block d-lg-none" style="padding:0px; font-family: 'roboto';">
-    <div class="px-2 pt-3 mt-2">
-        <div class="post-box no-border-sm p-3">
-            <small class="greyWhite">Total Asset Value (USD)</small>
-            <h4 class="roboto">
-                <b>$0.00</b>
-                <!--<small class="xsmall2 greyWhite2">-->
-                <!--    ≈-->
-                <!--    <span class="greyWhite2 _convertedTotalAsset">-->
-                <!--        ***-->
-                <!--    </span>-->
-                <!--</small>-->
-            </h4>
-            <div class="mt-3 border-t row">
-                <div class="col-12">
-                    <div class="row mt-2">
-                        <div class="col-6 border-r">
-                            <small class="greyWhite2">Investments (Active)</small>
-                            <h5 class="bol-text roboto reduceH5">0 <span class="greyWhite2 xsmall2">Running</span></h5>
-                        </div>
-                        <div class="col-6">
-                            <small class="greyWhite2">Gold Balance</small>
-                            <h5 class="bol-text roboto reduceH5">$0.00</h5>
+                    <!-- Promo Modal (Static Version) -->
+                    <style>
+                        .modal {
+                            display: none;
+                            position: fixed;
+                            z-index: 1;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+                            overflow: auto;
+                            background-color: rgba(0, 0, 0, 0.5);
+                        }
+                        .modal-content {
+                            background: linear-gradient(to right, #6a11cb, #2575fc);
+                            margin: 10% auto;
+                            padding: 20px;
+                            border: 1px solid #888;
+                            width: 90%;
+                            max-width: 500px;
+                            border-radius: 10px;
+                            color: white;
+                            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+                            animation: fadeIn 0.3s ease;
+                        }
+                        .close {
+                            float: right;
+                            cursor: pointer;
+                            font-size: 24px;
+                        }
+                        .close:hover {
+                            color: #000;
+                        }
+                        .promo-price-range {
+                            font-size: 1.2rem;
+                            margin: 15px 0;
+                            text-align: center;
+                        }
+                    </style>
+                    <div id="promoModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal()">&times;</span>
+                            <h2 id="promoTitle">Sample Promo</h2>
+                            <p id="promoDescription">Invest in our premium package today!</p>
+                            <div class="promo-price-range">
+                                <span>Price Range: <b id="promoPriceRange">$100 - $1000</b></span>
+                            </div>
+                            <p>Contact support to proceed with this investment.</p>
                         </div>
                     </div>
+                    <script>
+                        function openPromoModal() {
+                            document.getElementById('promoModal').style.display = 'block';
+                        }
+                        function closeModal() {
+                            document.getElementById('promoModal').style.display = 'none';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- New Promo Slider Section -->
-    <!-- Promo Slider Section -->
-    <style>
-        .promo-section {
-            width: 100%;
-            padding: 1rem;
-            background: #1a1d25;
-            overflow: hidden;
-        }
-
-        .promo-slider {
-            position: relative;
-            width: 100%;
-        }
-
-        .promo-slide {
-            display: none;
-            width: 100%;
-            padding: 1rem;
-        }
-
-        .promo-slide.active {
-            display: block;
-        }
-
-        .promo-card {
-            background: linear-gradient(135deg, #6366f1, #4f46e5);
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            height: auto;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .promo-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: white;
-            margin-bottom: 0.75rem;
-            line-height: 1.2;
-        }
-
-        .promo-description {
-            font-size: 0.875rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 1rem;
-            line-height: 1.5;
-        }
-
-        .promo-price-range {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 0.5rem;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
-            text-align: center;
-            color: white;
-        }
-
-        .price-label {
-            display: block;
-            margin-bottom: 0.25rem;
-            font-size: 0.875rem;
-        }
-
-        .price-value {
-            font-size: 1.125rem;
-            font-weight: 600;
-        }
-
-        .btn-create {
-            width: 100%;
-            background: white;
-            color: #4f46e5;
-            border: none;
-            border-radius: 0.5rem;
-            padding: 0.75rem;
-            font-weight: 600;
-            font-size: 0.875rem;
-        }
-
-        .slider-dots {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            cursor: pointer;
-        }
-
-        .dot.active {
-            background: white;
-        }
-    </style>
-
-    <div class="promo-section">
-        <div class="promo-slider">
-            
-        </div>
-        <div class="slider-dots">
-            
-        </div>
-    </div>
-
-    <script>
-        $(document).ready(function() {
-            const $slides = $('.promo-slide');
-            const $dots = $('.dot');
-            let currentIndex = 0;
-            let touchStartX = 0;
-            let touchEndX = 0;
-            
-            function showSlide(index) {
-                $slides.removeClass('active');
-                $dots.removeClass('active');
-                
-                $slides.eq(index).addClass('active');
-                $dots.eq(index).addClass('active');
-            }
-            
-            function nextSlide() {
-                currentIndex = (currentIndex + 1) % $slides.length;
-                showSlide(currentIndex);
-            }
-            
-            function prevSlide() {
-                currentIndex = (currentIndex - 1 + $slides.length) % $slides.length;
-                showSlide(currentIndex);
-            }
-            
-            // Handle dot clicks
-            $dots.on('click', function() {
-                currentIndex = $(this).data('index');
-                showSlide(currentIndex);
-            });
-            
-            // Handle touch events
-            $('.promo-slider').on('touchstart', function(e) {
-                touchStartX = e.touches[0].clientX;
-            });
-            
-            $('.promo-slider').on('touchend', function(e) {
-                touchEndX = e.changedTouches[0].clientX;
-                
-                const diff = touchStartX - touchEndX;
-                if (Math.abs(diff) > 50) { // Minimum swipe distance
-                    if (diff > 0) {
-                        nextSlide();
-                    } else {
-                        prevSlide();
-                    }
-                }
-            });
-            
-            // Auto-advance slides
-            setInterval(nextSlide, 4000);
-        });
-    </script>
-    <div class="container-fluid pt-4 dark-bg mt-2 curve-top" style="padding-bottom: 80px;">
-        <div class="container-fluid" style="font-family: 'roboto';">
-            <div class="row">
-                <div class="col-3 align-center">
-                    <a href="/wallet/deposit">
-                        <i class="material-icons-outlined BtnDark fit-content p-3" style="font-size: 18px;">
-                            arrow_downward
-                        </i>
-                        <small class="d-block mt-1">Deposit</small>
-                    </a>
+        <!-- Account Control Panel -->
+        <div class="account-control-panel-overlay" style="display: none;" onclick="closeAccountMangt()"></div>
+        <div class="account-control-panel post-box" style="padding: 0px; display: none; box-shadow: none; font-family: 'source sans pro';">
+            <div class="row pb-2 p-3">
+                <div class="col-2">
+                    <div class="fit-content py-1 px-2 post-box">
+                        <span class="material-icons-outlined fixIcon2">
+                            person
+                        </span>
+                    </div>
                 </div>
-                <div class="col-3 align-center">
-                    <a href="/invest/">
-                        <i class="material-icons-round BtnDark fit-content p-3 site-yellow" style="font-size: 18px;">
-                            stacked_bar_chart
-                        </i>
-                        <small class="d-block mt-1">Invest/Earn</small>
-                    </a>
+                <div class="col-10 pl-4">
+                    <h5 class="moreWhite reduceH5">
+                        <span class="greenText">Hello! Mary</span> <br>
+                        <small class="greyWhite">james@gmail.com</small>
+                    </h5>
                 </div>
-                <div class="col-3 align-center">
-                    <a href="/wallet/withdrawal">
-                        <i class="material-icons-round BtnDark fit-content p-3" style="font-size: 18px;">
-                            north_east
-                        </i>
-                        <small class="d-block mt-1">Withdraw</small>
-                    </a>
+                <div class="col-10 pl-4">
+                    <h5 class="moreWhite reduceH5">
+                        <small class="greyWhite">Account Type: Single Account</small>
+                    </h5>
                 </div>
-                <div class="col-3 align-center">
-                    <a href="/accounts/referral">
-                        <i class="material-icons-round BtnDark fit-content p-3" style="font-size: 18px;">
-                            group_add
-                        </i>
-                        <small class="d-block mt-1">Referral</small>
-                    </a>
+                <div class="mt-3 col-12 align-center">
+                    <small class="xsmall greyWhite">Spot Balance</small><br>
+                    <h5>$0.00</h5>
                 </div>
             </div>
-        </div>
-        <div class="row mt-2">
-            <div class="col-12 mt-4">
-    <div class="row mb-2">
-        <div class="col-6">
-            <small class="xsmall2 greyWhite2 fixIcon2">Crypto market rates</small>
-        </div>
-        <div class="col-6 align-right">
-            <a href="/coin-market-price">
-                <small class="xsmall2 greyWhite post-box no-border-sm py-1">More
-                    <i class="fa fa-caret-right"></i>
-                </small>
-            </a>
-        </div>
-    </div>
-</div>
-
-<div class="scrollmenu pl-2 pr-4 mt-2" style="width: 100vw;">
-    <div class="s-m-item mr-2 border-r pr-2">
-        <div>
-            <small class="boldText greyWhite">BTC/USD</small>
-            <img src="/static/assets/images/btc_icon.png" alt="btc" style="width: 17px; height: 17px;">
-        </div> 
-        <h5 class="mt-1 reduceH5">
-            <span class="textColor btcPrice">
-                <i class="fa-spin fa fa-spinner textColor"></i>
-            </span>
-        </h5>  
-    </div>
-    <!-- ETH -->
-    <div class="s-m-item mr-2 border-r pr-2">
-        <div>
-            <small class="boldText greyWhite">ETH/USD</small>
-            <img src="/static/assets/images/eth_icon.png" alt="eth" style="width: 17px; height: 17px;">
-        </div> 
-        <h5 class="mt-1 reduceH5">
-            <span class="ethPrice textColor"><i class="fa-spin fa fa-spinner textColor"></i></span>
-        </h5>  
-    </div>
-    <!-- BNB -->
-    <div class="s-m-item mr-2 border-r pr-2">
-        <div>
-            <small class="boldText greyWhite">BNB/USD</small>
-            <img src="/static/assets/images/bnb_icon.png" alt="bnb" style="width: 17px; height: 17px;">
-        </div> 
-        <h5 class="mt-1 reduceH5">
-            <span class="textColor bnbPrice"><i class="fa-spin fa fa-spinner textColor"></i></span>
-        </h5>  
-    </div>
-    <!-- solana -->
-    <div class="s-m-item mr-2 border-r pr-2">
-        <div>
-            <small class="boldText greyWhite">SOL/USD</small>
-            <img src="/static/assets/images/solana_icon.png" alt="sol" style="width: 17px; height: 17px;">
-        </div> 
-        <h5 class="reduceH5 mt-1">
-            <span class="textColor solPrice"><i class="fa-spin fa fa-spinner textColor"></i></span>
-        </h5>  
-    </div>
-    <!-- cardano -->
-    <div class="s-m-item mr-2 border-r pr-2">
-        <div>
-            <small class="boldText greyWhite">ADA/USD</small>
-            <img src="/static/assets/images/cardano_icon.png" alt="ada" style="width: 17px; height: 17px;">
-        </div> 
-        <h5 class="mt-1 reduceH5">
-            <span class="adaPrice textColor"><i class="fa-spin fa fa-spinner textColor"></i></span>
-        </h5>  
-    </div>
-    <!-- doge -->
-    <div class="s-m-item mr-2 pr-2">
-        <div>
-            <small class="boldText greyWhite">DOGE/USD</small>
-            <img src="/static/assets/images/doge_icon.jpg" alt="doge" style="width: 17px; height: 17px;">
-        </div> 
-        <h5 class="mt-1 reduceH5">
-            <span class="dogePrice textColor"><i class="fa-spin fa fa-spinner textColor"></i></span>
-        </h5>  
-    </div>
-</div>
-
-
-
-<script src="/static/vendor/jquery/jquery.js"></script>
-<script>
-    var coinListApiSettings = {
-        'async': true,
-        'scrossDomain': true,
-        'url': 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Cbinancecoin%2Cdogecoin%2Ccardano%2Csolana&vs_currencies=usd',
-        'method':'GET',
-        'headers': {}
-    }
-
-    const getCoinPrice = ()=>{
-        $.ajax(coinListApiSettings).done(
-            function(res){
-                $('.btcPrice').each(function(){
-                    $(this).html((res.bitcoin.usd).toLocaleString())
-                })
-                $('.ethPrice').each(function(){
-                    $(this)}).html((res.ethereum.usd).toLocaleString())
-                
-                $('.bnbPrice').each(function(){
-                    $(this)}).html((res.binancecoin.usd).toLocaleString())
-                
-                $('.adaPrice').each(function(){
-                    $(this).html((res.cardano.usd).toLocaleString())
-                })
-                $('.solPrice').each(function(){
-                    $(this).html((res.solana.usd).toLocaleString())
-                })
-                $('.dogePrice').each(function(){
-                    $(this).html((res.dogecoin.usd).toLocaleString())
-                })
-            }
-        );
-    }
-    setTimeout(getCoinPrice, 2000)
-
-</script>
-        </div>
-
-        <div class="border-t row pt-4 mb-2 mt-4">
-            <div class="col-8">
-                <small class="xsmall greyWhite2">My Investments</small> <br>
-                
-            </div>
-            <div class="col-4 text-right">
-                <a href="/dashboard/investments">
-                    <small class="xsmall2 greyWhite post-box no-border-sm py-1">Expand
-                        <i class="fa fa-caret-right"></i>
-                    </small>
+            <div class="border-t">
+                <a href="accounts/security-settings.html" class="mainWhite">
+                    <div class="a-p-inner px-3 py-1 mt-3 textColor">
+                        <i class="material-icons-outlined fixIcon3" style="font-size: 18px;">lock</i>&nbsp;&nbsp;
+                        Security
+                    </div>
+                </a>
+                <a href="accounts/account-verification.html" class="mainWhite">
+                    <div class="a-p-inner px-3 py-1 mt-3 textColor">
+                        <i class="material-icons-outlined fixIcon3" style="font-size: 18px;">fact_check</i>&nbsp;&nbsp;
+                        Verification
+                    </div>
+                </a>
+                <a href="wallet/assets.html" class="mainWhite">
+                    <div class="a-p-inner px-3 py-1 mt-3 textColor">
+                        <i class="material-icons-outlined fixIcon3" style="font-size: 18px;">account_balance_wallet</i>&nbsp;&nbsp;
+                        Wallet
+                    </div>
+                </a>
+                <a href="index.html" class="textColor">
+                    <div class="a-p-inner p-3 mt-3 border-t">
+                        <i class="material-icons-outlined fixIcon3" style="font-size: 18px;">logout</i>&nbsp;&nbsp;
+                        Sign out
+                    </div>
                 </a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                
-                    <div class="align-center mt-3 py-50">
-                        <div>
-                            <i class="fi fi-rr-search-alt greyWhite2" style="font-size: 42px;"></i>
-                        </div>
-                        <h5 class="reduceH5 greyWhite2">
-                            No data found
-                        </h5>
-                        <div class="mt-2">
-                            <a href="/invest/" class="site-yellow">
-                                Invest now
-                            </a>
-                        </div>
+
+        <!-- Notification Modal -->
+        <div class="modal fade" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="notificationModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div style="background-color: #0ac989;" class="modal-header">
+                        <h5 class="modal-title" id="notificationModalLabel">Notifications</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                
+                    <div style="background-color: black;" class="modal-body" id="notificationModalBody">
+                        <p>No notifications available.</p>
+                    </div>
+                    <div style="background-color: black;" class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- == -->
 
-        <div style="max-height: 250px; overflow-y: scroll; overflow-x: hidden;" class="py-4">
-            
+        <!-- Google Translate Element -->
+        <div class="translate-container">
+            <div id="google_translate_element"></div>
         </div>
-        <div class="mt-4 row border-t pt-4">
-            <div class="col-7">
-                <h5 class="reduceH5 greyWhite">
-                    Recent Transactions
-                </h5>
-            </div>
-            <div class="col-5 align-right">
-                <a href="/wallet/transaction-history">
-                    <small class="xsmall2 greyWhite post-box no-border-sm py-1">See All
-                        <i class="fa fa-caret-right"></i>
-                    </small>
-                </a>
-            </div>
-        </div>
-        
-            <div class="row mt-2">
-                <div class="col-5">
-                    <small class="xsmall2 greyWhite2">Txn</small>
-                </div>
-                <div class="col-3">
-                    <small class="xsmall2 greyWhite2">Date</small>
-                </div>
-                <div class="col-3">
-                    <small class="xsmall2 greyWhite2">Value</small>
-                </div>
-            </div>
-            
-            <div class="row mb-2">
-                <div class="col-5">
-                    
-                    <h5 style="color: #000; margin-top: 4px;">
-                        <i class="material-icons-outlined fixIcon3 site-yellow" style="font-size: 18px;">
-                            arrow_downward
-                        </i>
-                        <small class="xsmall greyWhite">Deposit</small>
-                    </h5>
-                    
-                </div>
-                <div class="col-3 fixIcon3">
-                    <small class="xsmall2 greyBlack">21-07-25</small>
-                </div>
-                <div class="col-4 fixIcon3">
-                    <h5 class="xsmall site-green" style="margin-top: 4px;">
-                        $ 10000.00
-                    </h5>
-                </div>
-            </div>
-            
-        
-    </div>
-    <!-- Promo Modal -->
-    <div id="promoModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2 id="promoTitle"></h2>
-            <p id="promoDescription"></p>
-            <div class="promo-price-range">
-                <span>Price Range: <b id="promoPriceRange"></b></span>
-            </div>
-            <form id="promoForm" method="POST">
-                <input type="hidden" name="csrfmiddlewaretoken" value="QSWuOhA3p7etsja5yITv8MvxopoNuzzPBqheP0RlfY7eNLiuxc8jrqLqCH18H9c0">
-                <div class="form-group">
-                    <label for="chosenAmount">Enter Amount:</label>
-                    <input type="number" id="chosenAmount" name="chosen_amount" step="0.01" required>
-                    <small id="amountWarning" style="color: red; display: none;">Amount is out of range.</small>
-                </div>
-                <button type="submit" class="btn-create">Submit</button>
-            </form>
-        </div>
-    </div>
-    
-    <script>
-        function openPromoModal(id, title, description, minPrice, maxPrice) {
-            document.getElementById('promoTitle').innerText = title;
-            document.getElementById('promoDescription').innerText = description;
-            document.getElementById('promoPriceRange').innerText = `$${minPrice} - $${maxPrice}`;
-    
-            const form = document.getElementById('promoForm');
-            form.action = `/wallet/create-promo-selection/${id}/`; // Set form action dynamically
-    
-            const input = document.getElementById('chosenAmount');
-            input.setAttribute('min', minPrice);
-            input.setAttribute('max', maxPrice);
-    
-            const warning = document.getElementById('amountWarning');
-            input.addEventListener('input', () => {
-                const value = parseFloat(input.value);
-                if (value < parseFloat(minPrice) || value > parseFloat(maxPrice)) {
-                    warning.style.display = 'block';
-                } else {
-                    warning.style.display = 'none';
-                }
-            });
-    
-            document.getElementById('promoModal').style.display = 'block';
-        }
-    
-        function closeModal() {
-            document.getElementById('promoModal').style.display = 'none';
-        }
-    </script>
-    
-</div>
-    
-
-            </div>
-        </div>
-    </div>
-    
-<!-- account control panel -->
-<div class="account-control-panel-overlay" style="display: none;" onclick="closeAccountMangt()"></div>
-<div class="account-control-panel post-box" style="padding: 0px; display: none; box-shadow: none; font-family: 'source sans pro';">
-    <div class="row pb-2 p-3">
-        <div class="col-2">
-            <div class="fit-content py-1 px-2 post-box">
-                <span class="material-icons-outlined fixIcon2">
-                    person
-                </span>
-            </div>
-        </div>
-        <div class="col-10 pl-4">
-            <h5 class="moreWhite reduceH5">
-                <span class="greenText">Hello! Mary</span> <br>
-                <small class="greyWhite">james@gmail.com</small>
-            </h5>
-        </div>
-        <div class="col-10 pl-4">
-            <h5 class="moreWhite reduceH5">
-                <small class="greyWhite">Account Type: Single Account</small>
-            </h5>
-        </div>
-        
-        <div class="mt-3 col-12 align-center">
-            <small class="xsmall greyWhite">Spot Balance</small><br>
-            <h5>$0.00</h5>
-        </div>
-    </div>
-    <div class="border-t">
-        <a href="/accounts/security-settings/" class="mainWhite">
-            <div class="a-p-inner px-3 py-1 mt-3 textColor">
-                <i class="material-icons-outlined fixIcon3" style="font-size: 18px;">lock</i>&nbsp;&nbsp;
-                Security
-            </div>
-        </a>
-        <a href="/accounts/account-verification/" class="mainWhite">
-            <div class="a-p-inner px-3 py-1 mt-3 textColor">
-                <i class="material-icons-outlined fixIcon3" style="font-size: 18px;">fact_check</i>&nbsp;&nbsp;
-                Verification
-                
-            </div>
-        </a>
-        <a href="/wallet/assets" class="mainWhite">
-            <div class="a-p-inner px-3 py-1 mt-3 textColor">
-                <i class="material-icons-outlined fixIcon3" style="font-size: 18px;">account_balance_wallet</i>&nbsp;&nbsp;
-                Wallet
-            </div>
-        </a>
-        
-        <a href="/accounts/logout/" class="textColor">
-            <div class="a-p-inner p-3 mt-3 border-t">
-               <input type="hidden" name="csrfmiddlewaretoken" value="QSWuOhA3p7etsja5yITv8MvxopoNuzzPBqheP0RlfY7eNLiuxc8jrqLqCH18H9c0">
-               <i class="material-icons-outlined fixIcon3" style="font-size: 18px;">logout</i>&nbsp;&nbsp;
-                Sign out
-            </div>
-        </a>
-    </div>
-</div>
-
-<script>
-    // account management modal
-    const accountMangt = (e)=>{
-        $('.account-control-panel-overlay').show()
-        $('.account-control-panel').show('slide', {direction:'up'}, 200)
-        // $(e).attr('onclick', 'closeAccountMangt(this)')
-    }
-    const closeAccountMangt = (e)=>{
-        $('.account-control-panel-overlay').hide()
-        $('.account-control-panel').hide('slide', {direction:'up'}, 200)
-        $(e).attr('onclick', 'accountMangt(this)')
-        $('.accountMangtBtn').each(function(){
-            $(this).attr('onclick', 'accountMangt(this)')
-        })
-    }
-</script>
-    <div class="modal fade" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="notificationModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-                <div style="background-color: #0ac989;" class="modal-header">
-                    <h5 class="modal-title" id="notificationModalLabel">Notifications</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div style="background-color: black;" class="modal-body" id="notificationModalBody">
-                    
-                </div>
-                <div style="background-color: black;" class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Google Translate Element -->
-            <div class="translate-container">
-              <div id="google_translate_element"></div>
-            </div>
-            
-            <!-- Google Translate Script -->
-            <script type="text/javascript">
-              function googleTranslateElementInit() {
-                new google.translate.TranslateElement(
-                  { pageLanguage: 'en' }, 
-                  'google_translate_element'
-                );
-              }
-            </script>
-            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-            
-            <!-- Styling -->
-            <style>
-              .translate-container {
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <style>
+            .translate-container {
                 position: fixed;
                 bottom: 20px;
                 left: 20px;
@@ -1427,15 +1149,12 @@
                 z-index: 1000;
                 font-family: Arial, sans-serif;
                 box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
-              }
-            
-              #google_translate_element {
+            }
+            #google_translate_element {
                 display: inline-block;
                 line-height: 1.2;
-              }
-            
-              /* Style the default dropdown */
-              .goog-te-combo {
+            }
+            .goog-te-combo {
                 padding: 5px 8px;
                 font-size: 13px;
                 border-radius: 4px;
@@ -1443,102 +1162,98 @@
                 background-color: #32874d;
                 color: #fff;
                 cursor: pointer;
-              }
-            
-              /* Optional: Hide Google branding (may violate their TOS) */
-              .goog-logo-link,
-              .goog-te-gadget span {
+            }
+            .goog-logo-link,
+            .goog-te-gadget span {
                 display: none !important;
-              }
-            
-              .goog-te-gadget {
+            }
+            .goog-te-gadget {
                 color: transparent !important;
                 white-space: nowrap;
-              }
-            </style>
+            }
+        </style>
 
-    <div class="modal fade" id="aboutLoan" tabindex="-1" aria-labelledby="aboutLoan" aria-hidden="true" data-keyboard="false" data-backdrop="static">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content mx-4" style="background: none;">
-                <div class="modal-body py-4 modal-bg">
-                    <h5 class="site-yellow">Trustexfussion Trading Loans</h5>
-                    <p class="greyWhite xsmall">
-                        Get a 50% loan capital for your investment. The other 50% will be charged from your spot wallet.
-                    </p>
-                    <p class="greyWhite xsmall">
-                        This project was designed to aid users who can provide up to 50% of the amount required for a trading package. Trustexfussion will borrow users a 50% principal to enter the trading market.
-                    </p>
-                    <p class="greyWhite xsmall">
-                        Trade still operates in its full capacity while on loan. The loan fee will be estimated and charged on redemption of the investment.
-                    </p>
-                    <p class="greyWhite xsmall">
-                        To use this feature just click on the <b>Apply loan</b> button to activate it. To disable it, just click the button again.
-                    </p>
-                    <div class="mt-4">
-                        <button class="BtnDark" aria-colspan="xsmall" data-dismiss="modal">
-                            OK
-                        </button>
+        <!-- About Loan Modal -->
+        <div class="modal fade" id="aboutLoan" tabindex="-1" aria-labelledby="aboutLoan" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content mx-4" style="background: none;">
+                    <div class="modal-body py-4 modal-bg">
+                        <h5 class="site-yellow">Trustexfussion Trading Loans</h5>
+                        <p class="greyWhite xsmall">
+                            Get a 50% loan capital for your investment. The other 50% will be charged from your spot wallet.
+                        </p>
+                        <p class="greyWhite xsmall">
+                            This project was designed to aid users who can provide up to 50% of the amount required for a trading package. Trustexfussion will borrow users a 50% principal to enter the trading market.
+                        </p>
+                        <p class="greyWhite xsmall">
+                            Trade still operates in its full capacity while on loan. The loan fee will be estimated and charged on redemption of the investment.
+                        </p>
+                        <p class="greyWhite xsmall">
+                            To use this feature just click on the <b>Apply loan</b> button to activate it. To disable it, just click the button again.
+                        </p>
+                        <div class="mt-4">
+                            <button class="BtnDark" aria-colspan="xsmall" data-dismiss="modal">
+                                OK
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-
-    <script src="/static/vendor/jquery/jquery.js"></script>
-    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/static/docs/js/main.js"></script>
-    <script src="/static/assets/plugin/jquery/jquery-ui.min.js"></script>
-    
-    
-
+    <!-- Scripts -->
+    <script src="static/vendor/jquery/jquery.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="static/docs/js/main.js"></script>
+    <script src="static/assets/plugin/jquery/jquery-ui.min.js"></script>
     <script>
         $('#dAmount').on('change', function() {
-        this.value = parseFloat(this.value).toFixed(2);
-    });
+            this.value = parseFloat(this.value).toFixed(2);
+        });
     </script>
     <script>
-        $(document).on('click', 'a[href^="#"]', function (event) {
-                event.preventDefault();
-
-                $('html, body').animate({
-                    scrollTop: $($.attr(this, 'href')).offset().top
-                }, 1000);
-            });
+        $(document).on('click', 'a[href^="#"]', function(event) {
+            event.preventDefault();
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 1000);
+        });
     </script>
     <!-- Smartsupp Live Chat script -->
     <script type="text/javascript">
         var _smartsupp = _smartsupp || {};
         _smartsupp.key = '278ffd698b09b356eaee29727d3461c65d5f431c';
-        window.smartsupp||(function(d) {
-        var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-        s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-        c.type='text/javascript';c.charset='utf-8';c.async=true;
-        c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+        window.smartsupp || (function(d) {
+            var s, c, o = smartsupp = function() { o._.push(arguments); };
+            o._ = [];
+            s = d.getElementsByTagName('script')[0];
+            c = d.createElement('script');
+            c.type = 'text/javascript';
+            c.charset = 'utf-8';
+            c.async = true;
+            c.src = 'https://www.smartsuppchat.com/loader.js?';
+            s.parentNode.insertBefore(c, s);
         })(document);
     </script>
-    <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+    <noscript> Powered by <a href="https://www.smartsupp.com" target="_blank">Smartsupp</a></noscript>
     <script>
-        const setTheme = (e)=>{
-            $('#theme').prop('href', `/static/docs/css/${e.id}.css`)
-
-            // icons
-            $('.theme-btn').each(function(){
+        const setTheme = (e) => {
+            $('#theme').prop('href', `static/docs/css/${e.id}.css`);
+            $('.theme-btn').each(function() {
                 $(this).addClass('blankBtn');
-                $(e).removeClass('blankBtn')
-            })
-
-            // update backend
-            $.ajax({
-                type: "POST",
-                url: "/accounts/changeTheme/" + e.id,
-                data: "",
-                dataType: "dataType",
-                success: function (response) {
-                    
-                }
+                $(e).removeClass('blankBtn');
             });
+            // Removed AJAX call to /accounts/changeTheme/ as it requires a backend
+            alert('Theme changed to ' + e.id);
+        }
+        const accountMangt = (e) => {
+            $('.account-control-panel-overlay').show();
+            $('.account-control-panel').show('slide', { direction: 'up' }, 200);
+        }
+        const closeAccountMangt = () => {
+            $('.account-control-panel-overlay').hide();
+            $('.account-control-panel').hide('slide', { direction: 'up' }, 200);
         }
     </script>
 </body>
